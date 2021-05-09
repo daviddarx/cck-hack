@@ -84,12 +84,12 @@ collections:
                     - bold
                     - link
 
-  - name: "items"
-    label: "Items"
+  - name: "projects"
+    label: "Projects"
     create: false
     delete: false
-    folder: "content/items/"
-    slug: "items"
+    folder: "content/projects/"
+    slug: "projects"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"
@@ -107,12 +107,12 @@ collections:
           - heading-three
           - bulleted-list
 
-  - name: "item"
-    label: "Item"
-    folder: "content/items/items/"
+  - name: "project"
+    label: "Project"
+    folder: "content/projects/projects/"
     create: true
     slug: "{{uuid}}"
-    description: "Create pages for items."
+    description: "Create pages for projects."
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"
@@ -152,25 +152,3 @@ collections:
             name: "image"
             widget: "image"
 
-  - name: "contact"
-    label: "Contact"
-    create: false
-    delete: false
-    folder: "content/contact/"
-    slug: "contact"
-    extension: "json"
-    format: "json"
-    summary: "Version: {{version}} - {{title}}"
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-
-      - label: "Content"
-        name: "content"
-        widget: "markdown"
-        buttons:
-          - bold
-          - link
-          - heading-three
-          - bulleted-list

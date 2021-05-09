@@ -10,22 +10,12 @@
     >
       <router-link
         class="navigation__link"
-        to="/about"
-      >
-        About
-      </router-link>
-      <router-link
+        to="/projekte"
+      >Projekte</router-link><!--
+      --><router-link
         class="navigation__link"
-        to="/items"
-      >
-        Items
-      </router-link>
-      <router-link
-        class="navigation__link"
-        to="/contact"
-      >
-        Contact
-      </router-link>
+        to="/ueber-mich"
+      >Über mich</router-link>
     </div>
   </nav>
 </template>

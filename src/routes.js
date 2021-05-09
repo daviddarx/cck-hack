@@ -1,8 +1,7 @@
 import Home from './components/pages/home.vue';
 import About from './components/pages/about.vue';
-import Items from './components/pages/items.vue';
-import ItemDetail from './components/pages/item-detail.vue';
-import Contact from './components/pages/contact.vue';
+import Projects from './components/pages/projects.vue';
+import ProjectDetail from './components/pages/project-detail.vue';
 
 import contents from './contents';
 
@@ -17,37 +16,30 @@ let routes = [
   },
   {
     label: 'About',
-    path: '/about',
+    path: '/ueber-mich',
     name: 'about',
     component: About,
     meta: { pageTitle: 'About' }
   },
   {
-    label: 'Items',
-    path: '/items',
-    name: 'items',
-    component: Items,
-    meta: { pageTitle: 'Items' }
+    label: 'Projekts',
+    path: '/projekte',
+    name: 'projects',
+    component: Projects,
+    meta: { pageTitle: 'Projekte' }
   },
-  {
-    label: 'Contact',
-    path: '/contact',
-    name: 'contact',
-    component: Contact,
-    meta: { pageTitle: 'Contact' }
-  }
 ];
 
-// //dynamically create routes for items
-contents.itemsList.forEach((item, i) => {
+// //dynamically create routes for projects
+contents.projectsList.forEach((project, i) => {
   routes.push(
     {
-      label: item.uuid,
-      path: '/items/'+item.uuid,
-      name: 'item-'+item.uuid,
-      component: ItemDetail,
+      label: project.uuid,
+      path: '/projekte/'+project.uuid,
+      name: project.uuid,
+      component: ProjectDetail,
       meta: {
-        content:item,
+        content:project,
         id: i,
         isNavHidden: true
       }

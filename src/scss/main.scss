@@ -44,7 +44,7 @@ body {
   line-height: var(--s-line-height);
   color: var(--c-text);
   overflow-x: hidden;
-  padding: 5vw;
+  padding: var(--s-gutter);
   box-sizing: border-box;
 }
 
@@ -84,11 +84,17 @@ a {
 }
 
 .navigation {
-  position: relative;
-  margin-top: var(--s-gutter);
+  position: fixed;
+  left: 25vw;
+  top: var(--s-gutter);
+  font-size: var(--s-text-s);
 
   &__link {
     margin-right: 1em;
+    text-decoration: none;
+    padding: 0.25em 0.75em 0.25em 0.75em;
+    border-radius: 1em;
+    border: 1px solid black;
 
     &.is-current {
       background-color: black;
@@ -110,7 +116,7 @@ a {
 
 .content {
   position: relative;
-  margin-top: calc(var(--s-gutter) * 2);
+  margin-top: 50vh;
   box-sizing: border-box;
 }
 

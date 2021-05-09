@@ -4,24 +4,24 @@
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
     <h2>
-      {{items.title}}
+      {{projects.title}}
     </h2>
 
     <div
-      v-html="getHTMLfromMD(items.content)"
+      v-html="getHTMLfromMD(projects.content)"
     >
     </div>
 
     <div>
       <div
-        v-for="item in list"
-        :key="item.title"
-        ref="item"
+        v-for="project in list"
+        :key="project.title"
+        ref="project"
       >
         <router-link
-          v-bind:to="'/items/'+item.uuid"
+          v-bind:to="'/projekte/'+project.uuid"
         >
-          {{item.title}}
+          {{project.title}}
         </router-link>
       </div>
     </div>
@@ -43,8 +43,8 @@
     mixins: [getHTMLfromMDMixin],
     data() {
       return {
-        items: contents.items,
-        list: contents.itemsList,
+        projects: contents.projects,
+        list: contents.projectsList,
         isDisplayed : false,
       }
     },

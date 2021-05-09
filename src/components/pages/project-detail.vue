@@ -8,10 +8,6 @@
     </h2>
 
     <p>
-      {{content.itemType}}
-    </p>
-
-    <p>
       {{content.desc}}
     </p>
 
@@ -27,12 +23,12 @@
         v-if="content.additionalImages"
       >
         <div
-          v-for="(item, i) in content.additionalImages"
-          :key="item.image+i"
+          v-for="(img, i) in content.additionalImages"
+          :key="img.image+i"
           ref="image"
         >
           <img
-            :src = item.image
+            :src = img.image
             :alt = content.title
             class = "img-to-load"
             @load="imgLoaded"
@@ -83,25 +79,25 @@
         return this.$route.meta.id;
       },
       linkNext: function () {
-        const id = (this.id < this.itemsList.length - 1 ) ? this.id + 1: 0;
+        const id = (this.id < this.projectsList.length - 1 ) ? this.id + 1: 0;
 
         return {
-          path: '/items/'+this.itemsList[id].uuid,
-          title: this.itemsList[id].title
+          path: '/projekte/'+this.projectsList[id].uuid,
+          title: this.projectsList[id].title
         }
       },
       linkPrev: function () {
-        const id = (this.id == 0 ) ? this.itemsList.length - 1 : this.id - 1 ;
+        const id = (this.id == 0 ) ? this.projectsList.length - 1 : this.id - 1 ;
 
         return {
-          path: '/items/'+this.itemsList[id].uuid,
-          title: this.itemsList[id].title
+          path: '/projekte/'+this.projectsList[id].uuid,
+          title: this.projectsList[id].title
         }
       }
     },
     data() {
       return {
-        itemsList: contents.itemsList,
+        projectsList: contents.projectsList,
         isDisplayed : false,
       }
     },
