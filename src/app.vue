@@ -13,6 +13,8 @@
 
     <custom-navigation ref="nav"></custom-navigation>
 
+    <custom-contact></custom-contact>
+
     <div class="content">
       <transition
         name="content"
@@ -36,6 +38,7 @@
   import Vue from "vue";
   import Logo from './components/logo.vue';
   import CustomNavigation from './components/navigation.vue';
+  import CustomContact from './components/contact.vue';
   import CustomTransition from './components/transition.vue';
   import BrowserWarning from './components/browser-warning.vue';
   import browserDetect from './browser-detect';
@@ -45,6 +48,7 @@
     components: {
       'logo': Logo,
       'custom-navigation': CustomNavigation,
+      'custom-contact': CustomContact,
       'custom-transition': CustomTransition,
       'browser-warning': BrowserWarning,
     },
