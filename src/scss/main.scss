@@ -69,6 +69,15 @@ a {
 
 .logo {
   font-weight: bold;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__desc {
+    font-size: var(--s-text-s);
+    margin-top: 0.5em;
+  }
 }
 
 .navigation {

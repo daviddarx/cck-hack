@@ -7,7 +7,12 @@
       <router-link
         to="/"
       >
-        LOGO
+        <h1 class="logo__title">
+          Cédric Knapp
+        </h1>
+        <p class="logo__desc">
+          Lorem Ipsum Dolor est.
+        </p>
       </router-link>
     </div>
   </div>
