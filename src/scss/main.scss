@@ -68,6 +68,9 @@ a {
 }
 
 .logo {
+  position: fixed;
+  top: var(--s-gutter);
+  left: var(--s-gutter);
   font-weight: bold;
 
   a {
