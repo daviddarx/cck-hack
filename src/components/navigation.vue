@@ -14,8 +14,10 @@
       >Projekte</router-link><!--
       --><router-link
         class="navigation__link"
-        to="/ueber-mich"
-      >Über mich</router-link>
+        to="/ueber-m"
+      >Über mich</router-link><!--
+      --><a href="mailto:hallo@cedric-knapp.ch" class="navigation__link navigation__email">hallo@cedric-knapp.ch</a><!--
+      --><span class="navigation__phone navigation__link">+41 77 425 60 66</span>
     </div>
   </nav>
 </template>

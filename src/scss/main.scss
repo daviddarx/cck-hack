@@ -85,12 +85,12 @@ a {
 
 .navigation {
   position: fixed;
-  left: 25vw;
   top: var(--s-gutter);
+  right: var(--s-gutter);
   font-size: var(--s-text-s);
 
   &__link {
-    margin-right: 1em;
+    margin-left: 1em;
     text-decoration: none;
     padding: 0.25em 0.75em 0.25em 0.75em;
     border-radius: 1em;
@@ -100,17 +100,6 @@ a {
       background-color: black;
       color: white;
     }
-  }
-}
-
-.contact {
-  position: fixed;
-  top: var(--s-gutter);
-  right: var(--s-gutter);
-  font-size: var(--s-text-s);
-
-  &__email {
-    padding-right: var(--s-gutter);
   }
 }
 
