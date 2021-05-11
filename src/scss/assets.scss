@@ -76,13 +76,15 @@ $breakpoints: (
 // styles
 :root {
   //colors
-  --c-text: black;
+  --c-text: rgb(226, 239, 255);
+  --c-title: rgb(103, 169, 255);
+  --c-bg: rgb(0, 0, 100);
 
   //sizes
   --s-text: 2rem;
   --s-text-s: calc(var(--s-text) * 0.5);
   --s-line-height: 1.25;
-  --s-gutter: 2vw;
+  --s-gutter: 7vw;
 
   //eases https://matthewlein.com/tools/ceaser
   --e-in: cubic-bezier(0.895, 0.03, 0.685, 0.22); // quart
