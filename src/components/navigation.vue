@@ -17,7 +17,7 @@
         to="/ueber-m"
       >Über mich</router-link><!--
       --><a href="mailto:hallo@cedric-knapp.ch" class="navigation__link navigation__email">hallo@cedric-knapp.ch</a><!--
-      --><span class="navigation__phone navigation__link">+41 77 425 60 66</span>
+      --><a href="tel:+41 77 425 60 66" class="navigation__phone navigation__link">+41 77 425 60 66</a>
     </div>
   </nav>
 </template>
