@@ -111,7 +111,13 @@ a {
 }
 
 .content-enter-active {
-  transition: transform var(--e-out) 1s 0.5s, opacity linear 0.5s 0.5s;
+  transition: transform var(--e-out), opacity linear;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+
+.content-leave-active {
+  transition: opacity linear 0.25s;
 }
 
 .content-enter {
@@ -122,6 +128,14 @@ a {
 .content-enter-to {
   transform: translateY(0);
   opacity: 1;
+}
+
+.content-leave {
+  opacity: 1;
+}
+
+.content-leave-to {
+  opacity: 0;
 }
 
 .img-to-load {
