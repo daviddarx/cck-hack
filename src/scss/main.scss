@@ -72,20 +72,32 @@ a {
 
 .navigation {
   position: fixed;
+  z-index: 10;
   top: var(--s-gutter);
   right: var(--s-gutter);
   font-size: var(--s-text-s);
   font-weight: bold;
 
   &__link {
-    margin-left: 2em;
+    --s-padding: 1.4em;
+    --s-padding-modifier-top: 0.5;
+    --s-padding-modifier-bottom: 0.5;
+    --s-margin: 2em;
+
+    margin-left: var(--s-margin);
     text-decoration: none;
-    padding: 0.25em 0.75em 0.25em 0.75em;
-    border-radius: 1em;
+    padding-left: var(--s-padding);
+    padding-right: var(--s-padding);
+    padding-top: calc(var(--s-padding) * var(--s-padding-modifier-top));
+    padding-bottom: calc(var(--s-padding) * var(--s-padding-modifier-bottom));
+    border-radius: calc(var(--s-padding) * 1.5);
     border: 2px solid var(--c-title);
+    transition: border-color, background-color;
+    transition-timing-function: var(--e-out);
+    transition-duration: 0.25s;
 
     &--secondary {
-      margin-left: 1em;
+      margin-left: 0;
       background-color: var(--c-bg);
       border-color: var(--c-bg);
     }
