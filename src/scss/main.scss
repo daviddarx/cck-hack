@@ -180,11 +180,18 @@ a {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-between;
   font-size: var(--s-text-s);
   border-top: 2px var(--c-title) solid;
   padding-top: 1em;
   margin-top: var(--s-gutter);
   padding-bottom: var(--s-gutter);
+
+  &__dash {
+    display: inline-block;
+    padding: 0 1em 0 1em;
+  }
 }
 
 .transition {

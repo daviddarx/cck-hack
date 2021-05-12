@@ -1,7 +1,13 @@
 
 <template>
   <div class="footer">
-    Footer
+    <p class="footer__copyright">
+      ©{{this.year}} Cédric Knapp <span class="footer__dash">–</span> <a href="mailto:hallo@cedric-knapp.ch">hallo@cedric-knapp.ch</a> <span class="footer__dash">–</span> <a href="tel:+41 77 425 60 66">+41 77 425 60 66</a>
+
+    </p>
+    <p class="footer__credits">
+      Design + Code : <a href="https://www.daviddarx.com">David Darx</a>
+    </p>
   </div>
 </template>
 
@@ -9,9 +15,13 @@
   import Vue from "vue";
 
   export default Vue.extend({
-    data() {
-      return {
+    computed: {
+      year: function () {
+        return new Date().getFullYear();
       }
+    },
+    data() {
+      return {}
     },
     mounted () {
     },
