@@ -86,6 +86,9 @@ $breakpoints: (
   --s-line-height: 1.25;
   --s-gutter: 6vw;
 
+  //duration
+  --d-text-content: 0.25s;
+
   //eases https://matthewlein.com/tools/ceaser
   --e-in: cubic-bezier(0.895, 0.03, 0.685, 0.22); // quart
   --e-out: cubic-bezier(0.165, 0.84, 0.44, 1); // quart

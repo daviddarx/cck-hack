@@ -71,7 +71,7 @@ a {
 
   &__title {
     font-size: var(--s-title);
-    transition: color var(--e-out) 0.25s;
+    transition: color var(--e-out) var(--d-text-content);
 
     #{$el}:hover & {
       color: var(--c-text);
@@ -108,7 +108,7 @@ a {
     border: 2px solid var(--c-title);
     transition: color, border-color, background-color;
     transition-timing-function: var(--e-out);
-    transition-duration: 0.25s;
+    transition-duration: var(--d-text-content);
 
     &:hover {
       background-color: var(--c-title);
@@ -140,6 +140,14 @@ a {
   position: relative;
   margin-top: 50vh;
   box-sizing: border-box;
+
+  a {
+    transition: color var(--e-out) var(--d-text-content);
+
+    &:hover {
+      color: var(--c-title);
+    }
+  }
 }
 
 .content-enter-active {
