@@ -6,7 +6,7 @@
 
     </p>
     <p class="footer__credits">
-      Design + Code : <a href="https://www.daviddarx.com">David Darx</a>
+      Design + Code : <a href="https://www.daviddarx.com" target="_blank">David Darx</a>
     </p>
   </div>
 </template>
