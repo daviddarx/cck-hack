@@ -55,13 +55,27 @@ a {
 }
 
 .logo {
+  --s-title: calc(var(--s-text-s) * 2);
+
+  $el: #{&};
+
   position: fixed;
   top: var(--s-gutter);
   left: var(--s-gutter);
+  margin-top: calc(var(--s-title) * -0.5);
   font-weight: bold;
 
   a {
     text-decoration: none;
+  }
+
+  &__title {
+    font-size: var(--s-title);
+    transition: color var(--e-out) 0.25s;
+
+    #{$el}:hover & {
+      color: var(--c-text);
+    }
   }
 
   &__desc {
@@ -113,8 +127,6 @@ a {
         border-color: var(--c-bg);
       }
     }
-
-
 
     &.is-current {
       background-color: var(--c-text);
@@ -168,7 +180,11 @@ a {
 }
 
 .footer {
-  margin-top: 2em;
+  font-size: var(--s-text-s);
+  border-top: 2px var(--c-title) solid;
+  padding-top: 1em;
+  margin-top: var(--s-gutter);
+  padding-bottom: var(--s-gutter);
 }
 
 .transition {
