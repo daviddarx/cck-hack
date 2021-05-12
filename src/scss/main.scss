@@ -92,21 +92,29 @@ a {
     padding-bottom: calc(var(--s-padding) * var(--s-padding-modifier-bottom));
     border-radius: calc(var(--s-padding) * 1.5);
     border: 2px solid var(--c-title);
-    transition: border-color, background-color;
+    transition: color, border-color, background-color;
     transition-timing-function: var(--e-out);
     transition-duration: 0.25s;
-
-    &--secondary {
-      margin-left: 0;
-      background-color: var(--c-bg);
-      border-color: var(--c-bg);
-    }
 
     &:hover {
       background-color: var(--c-title);
       border-color: var(--c-title);
       color: var(--c-bg);
     }
+
+    &--secondary {
+      margin-left: 0;
+      background-color: var(--c-bg);
+      border-color: var(--c-bg);
+
+      &:hover {
+        color: var(--c-title);
+        background-color: var(--c-bg);
+        border-color: var(--c-bg);
+      }
+    }
+
+
 
     &.is-current {
       background-color: var(--c-text);
