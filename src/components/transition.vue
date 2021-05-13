@@ -31,10 +31,14 @@
     },
     methods: {
       beforeEach: function (to, from, next) {
+        document.body.classList.add('transition-out');
+
         this.isDisplayingIn = true;
         this.nextFunction = next;
       },
       aferEnterIn: function() {
+        document.body.classList.remove('transition-out');
+
         this.isDisplayingIn = false;
         this.nextFunction();
         this.isDisplayingOut = true;

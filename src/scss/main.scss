@@ -140,6 +140,11 @@ a {
   position: relative;
   margin-top: 50vh;
   box-sizing: border-box;
+  transition: opacity linear 0.25s;
+
+  .transition-out & {
+    opacity: 0;
+  }
 
   a {
     transition: color var(--e-out) var(--d-text-content);
@@ -156,10 +161,6 @@ a {
   transition-delay: 0.5s;
 }
 
-.content-leave-active {
-  transition: opacity linear 0.25s;
-}
-
 .content-enter {
   transform: translateY(4em);
   opacity: 0;
@@ -168,14 +169,6 @@ a {
 .content-enter-to {
   transform: translateY(0);
   opacity: 1;
-}
-
-.content-leave {
-  opacity: 1;
-}
-
-.content-leave-to {
-  opacity: 0;
 }
 
 .img-to-load {
