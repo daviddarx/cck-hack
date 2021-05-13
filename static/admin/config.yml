@@ -30,6 +30,10 @@ collections:
           - heading-three
           - bulleted-list
 
+      - label: "Button Label"
+        name: "buttonLabel"
+        widget: "string"
+
   - name: "about"
     label: "About"
     create: false
