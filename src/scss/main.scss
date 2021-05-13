@@ -74,6 +74,7 @@ a {
   padding-bottom: calc(var(--s-padding) * var(--s-padding-modifier-bottom));
   border-radius: calc(var(--s-padding) * 1.5);
   border: 2px solid var(--c-title);
+  background-color: var(--c-bg);
   transition: color, border-color, background-color;
   transition-timing-function: var(--e-out);
   transition-duration: var(--d-text-content);
