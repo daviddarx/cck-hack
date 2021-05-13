@@ -54,6 +54,48 @@ a {
   text-decoration: underline;
 }
 
+@mixin cta() {
+  --s-padding: 1.4em;
+  --s-padding-modifier-top: 0.5;
+  --s-padding-modifier-bottom: 0.45;
+
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  padding-left: var(--s-padding);
+  padding-right: var(--s-padding);
+  padding-top: calc(var(--s-padding) * var(--s-padding-modifier-top));
+  padding-bottom: calc(var(--s-padding) * var(--s-padding-modifier-bottom));
+  border-radius: calc(var(--s-padding) * 1.5);
+  border: 2px solid var(--c-title);
+  transition: color, border-color, background-color;
+  transition-timing-function: var(--e-out);
+  transition-duration: var(--d-text-content);
+
+  &:hover {
+    background-color: var(--c-title);
+    border-color: var(--c-title);
+    color: var(--c-bg);
+  }
+}
+
+.cta {
+  @include cta();
+}
+
+@mixin text-link() {
+  transition: color var(--e-out) var(--d-text-content);
+
+  &:hover {
+    color: var(--c-title);
+  }
+}
+
+.text-link {
+  @include text-link();
+}
+
 .logo {
   --s-title: calc(var(--s-text-s) * 2);
 
