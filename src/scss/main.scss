@@ -25,7 +25,7 @@ html {
 
 body {
   font-size: var(--s-text);
-  line-height: var(--s-line-height);
+  line-height: var(--s-lh);
   color: var(--c-text);
   overflow-x: hidden;
   padding: var(--s-gutter);
@@ -42,6 +42,11 @@ h6 {
   @include fontTitle();
 
   color: var(--c-title);
+}
+
+h2 {
+  font-size: var(--s-h2);
+  line-height: var(--s-lh-h2);
 }
 
 b,
@@ -170,6 +175,14 @@ a {
   .transition-out & {
     opacity: 0;
   }
+
+  .cta {
+    margin-top: 2.5em;
+  }
+
+  p {
+    margin-top: 2em;
+  }
 }
 
 .content-enter-active {
@@ -197,13 +210,19 @@ a {
   }
 }
 
+.home {
+  --s-padding: calc(var(--s-gutter) * 2);
+
+  padding: 0 var(--s-padding) 0 var(--s-padding);
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   font-size: var(--s-text-s);
   border-top: 2px var(--c-title) solid;
   padding-top: 1em;
-  margin-top: var(--s-gutter);
+  margin-top: calc(var(--s-gutter) * 2);
   padding-bottom: var(--s-gutter);
 
   &__dash {
