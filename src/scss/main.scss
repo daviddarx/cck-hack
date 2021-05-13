@@ -170,14 +170,6 @@ a {
   .transition-out & {
     opacity: 0;
   }
-
-  a {
-    transition: color var(--e-out) var(--d-text-content);
-
-    &:hover {
-      color: var(--c-title);
-    }
-  }
 }
 
 .content-enter-active {
