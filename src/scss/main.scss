@@ -168,9 +168,15 @@ a {
 
 .content {
   position: relative;
-  margin-top: 50vh;
+  margin-top: 30vh;
   box-sizing: border-box;
   transition: opacity linear 0.25s;
+
+  &__centered {
+    --s-padding: calc(var(--s-gutter) * 2);
+
+    padding: 0 var(--s-padding) 0 var(--s-padding);
+  }
 
   .transition-out & {
     opacity: 0;
@@ -208,12 +214,6 @@ a {
   &.loaded {
     opacity: 1;
   }
-}
-
-.home {
-  --s-padding: calc(var(--s-gutter) * 2);
-
-  padding: 0 var(--s-padding) 0 var(--s-padding);
 }
 
 .footer {

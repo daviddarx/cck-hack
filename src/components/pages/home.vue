@@ -4,21 +4,23 @@
     class="home"
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
-    <h2>
-      {{home.title}}
-    </h2>
+    <div class="content__centered">
+      <h2>
+        {{home.title}}
+      </h2>
 
-    <div
-      v-html="getHTMLfromMD(home.content)"
-    >
+      <div
+        v-html="getHTMLfromMD(home.content)"
+      >
+      </div>
+
+      <router-link
+        class="home__cta cta"
+        to="/projekte"
+      >
+        {{home.buttonLabel}}
+      </router-link>
     </div>
-
-    <router-link
-      class="home__cta cta"
-      to="/projekte"
-    >
-      {{home.buttonLabel}}
-    </router-link>
 
     <custom-footer></custom-footer>
   </div>
