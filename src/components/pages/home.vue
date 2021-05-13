@@ -13,6 +13,13 @@
     >
     </div>
 
+    <router-link
+      class="home__cta cta"
+      to="/projekte"
+    >
+      {{home.buttonLabel}}
+    </router-link>
+
     <custom-footer></custom-footer>
   </div>
 </template>
