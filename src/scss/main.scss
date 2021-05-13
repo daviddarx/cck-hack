@@ -136,10 +136,10 @@ a {
 
   &__link {
     @include cta();
+
     --s-margin: 2em;
 
     margin-left: var(--s-margin);
-    }
 
     &--secondary {
       margin-left: calc(var(--s-margin) * 0.3);
