@@ -71,6 +71,7 @@ collections:
       - label: "Positions"
         name: "positions"
         widget: "list"
+        required: false
         fields:
           - label: "Dates"
             name: "dates"
@@ -82,32 +83,8 @@ collections:
             name: "description"
             widget: "markdown"
             buttons:
-              - bold
               - link
               - heading-three
-              - bulleted-list
-          - label: "List Content"
-            name: "listcontent"
-            widget: "list"
-            required: false
-            fields:
-              - label: "Definition List"
-                name: "definitionlist"
-                widget: "object"
-                required: false
-                fields:
-                  - label: "Title"
-                    name: "title"
-                    widget: "string"
-                    required: false
-
-                  - label: "Description"
-                    name: "desc"
-                    widget: "markdown"
-                    required: false
-                    buttons:
-                    - bold
-                    - link
 
   - name: "projects"
     label: "Projects"
