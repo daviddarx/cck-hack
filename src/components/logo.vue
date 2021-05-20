@@ -11,7 +11,7 @@
           Cédric Knapp
         </h1>
         <p class="logo__desc">
-          Lorem Ipsum Dolor est.
+          content that matters.
         </p>
       </router-link>
     </div>
