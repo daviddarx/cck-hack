@@ -3,43 +3,76 @@
   <div
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
+    <span> {{about.subline}} </span>
+
     <h2>
       {{about.title}}
     </h2>
 
-    <div
-        v-for="item in about.content"
-        v-bind:key="item.title"
-      >
-        <h3>
-          {{item.title}}
-        </h3>
-        <div
-          v-if="item.textcontent"
-          v-html="getHTMLfromMD(item.textcontent)"
-        >
-        </div>
-        <dl
-          v-if="item.listcontent"
-        >
-          <template
-            v-for="list in item.listcontent"
-          >
-            <dt
-              v-bind:key="list.definitionlist.title+'titel'"
-              v-html="list.definitionlist.title"
-            >
-            </dt>
-            <dd
-              v-bind:key="list.definitionlist.title+'desc'"
-              v-html="getHTMLfromMD(list.definitionlist.desc)"
-            >
-            </dd>
-          </template>
-        </dl>
-      </div>
+    <p>
+      {{about.lead}}
+    </p>
 
-      <custom-footer></custom-footer>
+    <img
+      :src = about.image
+    >
+
+    <a
+      :href = about.cvdoc
+      target="_blank"
+    >
+      {{about.cvlabel}}
+    </a>
+
+    <h3>
+      {{about.positionstitle}}
+    </h3>
+
+    <div
+      v-for="position in about.positions"
+      v-bind:key="position.title"
+    >
+      <span>
+        {{position.dates}}
+      </span>
+      <h4>
+        {{position.agency}}
+      </h4>
+      <div
+        v-html="getHTMLfromMD(position.description)"
+      >
+      </div>
+    </div>
+
+    <h3>
+      {{about.languagestitle}}
+    </h3>
+
+    <div
+      v-for="language in about.languages"
+      v-bind:key="language.title"
+      ref="language"
+    >
+      <span>
+        {{language.language}}
+      </span>
+      <div>
+        {{language.level}}
+      </div>
+    </div>
+
+    <h3>
+      {{about.skillstitle}}
+    </h3>
+
+    <span
+      v-for="skill in about.skills"
+      v-bind:key="skill.title"
+    >
+      {{skill.skill}}
+    </span>
+
+    <custom-footer></custom-footer>
   </div>
 </template>
 
