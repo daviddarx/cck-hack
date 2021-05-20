@@ -69,7 +69,7 @@ collections:
         widget: "file"
 
       - label: "Positions Title"
-        name: "languagestitle"
+        name: "positionstitle"
         widget: "string"
 
       - label: "Positions"
