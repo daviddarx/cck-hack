@@ -68,6 +68,10 @@ collections:
         name: "cvdoc"
         widget: "file"
 
+      - label: "Positions Title"
+        name: "languagestitle"
+        widget: "string"
+
       - label: "Positions"
         name: "positions"
         widget: "list"
@@ -85,6 +89,40 @@ collections:
             buttons:
               - link
               - heading-three
+
+      - label: "Languages Title"
+        name: "languagestitle"
+        widget: "string"
+
+      - label: "Languages"
+        name: "languages"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Language"
+            name: "language"
+            widget: "string"
+          - label: "Level"
+            name: "level"
+            widget: "number"
+            default: 5
+            value_type: "int"
+            min: 1
+            max: 5
+            step: 1
+
+      - label: "Skills Title"
+        name: "skillstitle"
+        widget: "string"
+
+      - label: "Skills"
+        name: "skills"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Skill"
+            name: "skill"
+            widget: "string"
 
   - name: "projects"
     label: "Projects"
