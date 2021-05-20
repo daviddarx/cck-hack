@@ -44,9 +44,29 @@ collections:
     format: "json"
     summary: "Version: {{version}} - {{title}}"
     fields:
+      - label: "Subline"
+        name: "subline"
+        widget: "string"
+
       - label: "Title"
         name: "title"
         widget: "string"
+
+      - label: "Lead"
+        name: "lead"
+        widget: "text"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+
+      - label: "CV Label"
+        name: "cvlabel"
+        widget: "image"
+
+      - label: "CV Doc"
+        name: "cvdoc"
+        widget: "file"
 
       - label: "Content"
         name: "content"
