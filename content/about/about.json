@@ -1,5 +1,5 @@
 {
-  "title": "About",
+  "title": "impress with content.",
   "content": [
     {
       "title": "Part 1 Title",
@@ -33,5 +33,27 @@
       "title": "Part 3 Title",
       "textcontent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     }
-  ]
+  ],
+  "positions": [
+    {
+      "dates": "2018 – Heute",
+      "agency": "Eyekon ",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris.\n\n### Titel H3\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris."
+    },
+    {
+      "dates": "2015 – 2018",
+      "agency": "20 Minutes ",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris.\n\n### Titel H3\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris."
+    },
+    {
+      "dates": "2012 – 2015",
+      "agency": "Mustercompanie",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris.\n\n### Titel H3\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris."
+    }
+  ],
+  "subline": "About",
+  "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris.",
+  "image": "/images/uploads/about.jpg",
+  "cvlabel": "CV herunterladen",
+  "cvdoc": "/images/uploads/sample.pdf"
 }
