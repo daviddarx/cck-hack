@@ -68,17 +68,18 @@ collections:
         name: "cvdoc"
         widget: "file"
 
-      - label: "Content"
-        name: "content"
+      - label: "Positions"
+        name: "positions"
         widget: "list"
-        required: false
         fields:
-          - label: "Title"
-            name: "title"
+          - label: "Dates"
+            name: "dates"
             widget: "string"
-          - label: "Text Content"
-            name: "textcontent"
-            required: false
+          - label: "Agency"
+            name: "agency"
+            widget: "string"
+          - label: "Description"
+            name: "description"
             widget: "markdown"
             buttons:
               - bold
