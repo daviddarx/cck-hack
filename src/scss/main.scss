@@ -146,6 +146,7 @@ a {
     --s-margin: 2em;
 
     margin-left: var(--s-margin);
+    text-transform: uppercase;
 
     &--secondary {
       margin-left: calc(var(--s-margin) * 0.3);
