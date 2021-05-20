@@ -123,6 +123,14 @@ collections:
             name: "skill"
             widget: "string"
 
+      - label: "Clients Title"
+        name: "clients title"
+        widget: "string"
+
+      - label: "Clients"
+        name: "clients"
+        widget: "markdown"
+
   - name: "projects"
     label: "Projects"
     create: false
