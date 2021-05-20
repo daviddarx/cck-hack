@@ -2,75 +2,81 @@
 <template>
   <div
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
+    class="about"
   >
-    <span> {{about.subline}} </span>
+    <div class="content__centered">
 
-    <h2>
-      {{about.title}}
-    </h2>
+      <span class="about__subline subline"> {{about.subline}} </span>
 
-    <p>
-      {{about.lead}}
-    </p>
+      <h2 class="about__title">
+        {{about.title}}
+      </h2>
 
-    <img
-      :src = about.image
-    >
+      <p class="about__lead">
+        {{about.lead}}
+      </p>
 
-    <a
-      :href = about.cvdoc
-      target="_blank"
-    >
-      {{about.cvlabel}}
-    </a>
-
-    <h3>
-      {{about.positionstitle}}
-    </h3>
-
-    <div
-      v-for="position in about.positions"
-      v-bind:key="position.title"
-    >
-      <span>
-        {{position.dates}}
-      </span>
-      <h4>
-        {{position.agency}}
-      </h4>
-      <div
-        v-html="getHTMLfromMD(position.description)"
+      <img
+        :src = about.image
+        class="about__img"
       >
+
+      <a
+        :href = about.cvdoc
+        target="_blank"
+        class="about__link"
+      >
+        {{about.cvlabel}}
+      </a>
+
+      <h3 class="about__subtitle subline">
+        {{about.positionstitle}}
+      </h3>
+
+      <div
+        v-for="position in about.positions"
+        v-bind:key="position.title"
+      >
+        <span>
+          {{position.dates}}
+        </span>
+        <h4>
+          {{position.agency}}
+        </h4>
+        <div
+          v-html="getHTMLfromMD(position.description)"
+        >
+        </div>
       </div>
-    </div>
 
-    <h3>
-      {{about.languagestitle}}
-    </h3>
+      <h3 class="about__subtitle subline">
+        {{about.languagestitle}}
+      </h3>
 
-    <div
-      v-for="language in about.languages"
-      v-bind:key="language.title"
-      ref="language"
-    >
-      <span>
-        {{language.language}}
+      <div
+        v-for="language in about.languages"
+        v-bind:key="language.title"
+        ref="language"
+      >
+        <span>
+          {{language.language}}
+        </span>
+        <div>
+          {{language.level}}
+        </div>
+      </div>
+
+      <h3 class="about__subtitle subline">
+        {{about.skillstitle}}
+      </h3>
+
+      <span
+        v-for="skill in about.skills"
+        v-bind:key="skill.title"
+      >
+        {{skill.skill}}
       </span>
-      <div>
-        {{language.level}}
-      </div>
     </div>
-
-    <h3>
-      {{about.skillstitle}}
-    </h3>
-
-    <span
-      v-for="skill in about.skills"
-      v-bind:key="skill.title"
-    >
-      {{skill.skill}}
-    </span>
 
     <custom-footer></custom-footer>
   </div>
