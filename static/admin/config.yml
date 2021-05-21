@@ -126,7 +126,7 @@ collections:
             widget: "string"
 
       - label: "Clients Title"
-        name: "clients title"
+        name: "clientstitle"
         widget: "string"
 
       - label: "Clients"

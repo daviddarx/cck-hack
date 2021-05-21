@@ -8,7 +8,7 @@
 
       <span class="about__subline subline"> {{about.subline}} </span>
 
-      <h2 class="about__title">
+      <h2 class="about__title content__title">
         {{about.title}}
       </h2>
 
@@ -29,7 +29,7 @@
         {{about.cvlabel}}
       </a>
 
-      <h3 class="about__subtitle subline">
+      <h3 class="content__subtitle subline">
         {{about.positionstitle}}
       </h3>
 
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <h3 class="about__subtitle subline">
+      <h3 class="content__subtitle subline">
         {{about.languagestitle}}
       </h3>
 
@@ -74,7 +74,7 @@
         </div>
       </div>
 
-      <h3 class="about__subtitle subline">
+      <h3 class="content__subtitle subline">
         {{about.skillstitle}}
       </h3>
 
@@ -89,7 +89,7 @@
         </span>
       </div>
 
-      <h3 class="about__subtitle subline">
+      <h3 class="content__subtitle subline">
         {{about.clientstitle}}
       </h3>
 

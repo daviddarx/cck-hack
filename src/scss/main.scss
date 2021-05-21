@@ -201,8 +201,19 @@ a {
     opacity: 0;
   }
 
+  &__title {
+    margin-top: 0.5em;
+  }
+
+  &__subtitle {
+    color: var(--c-text);
+    width: 50%;
+    margin-top: var(--s-vertical-spacing);
+    margin-bottom: calc(var(--s-vertical-spacing) * 0.5);
+  }
+
   .cta {
-    margin-top: 2.5em;
+    margin-top: var(--s-p-margin-top);
   }
 
   p {
@@ -234,11 +245,6 @@ a {
 
   &__link {
     margin-top: var(--s-p-margin-top);
-  }
-
-  &__subtitle {
-    margin-top: var(--s-vertical-spacing);
-    margin-bottom: calc(var(--s-vertical-spacing) * 0.5);
   }
 
   &__position {
