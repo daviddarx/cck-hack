@@ -18,16 +18,25 @@
       >
       </div>
 
-      <div>
+      <div class="projects__listing">
         <div
           v-for="project in list"
           :key="project.title"
           ref="project"
+          class="projects-list"
         >
           <router-link
             v-bind:to="'/projekte/'+project.uuid"
           >
-            {{project.title}}
+            <h3 class="projects-list__subline">
+              {{project.subline}}
+            </h3>
+            <p class="projects-list__title">
+              {{project.title}}
+            </p>
+            <div class="projects-list__tags">
+              {{project.tags}}
+            </div>
           </router-link>
         </div>
       </div>
