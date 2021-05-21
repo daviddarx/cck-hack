@@ -206,7 +206,7 @@ a {
   }
 
   p {
-    margin-top: 2em;
+    margin-top: var(--s-p-margin-top);
   }
 }
 
@@ -233,7 +233,6 @@ a {
   }
 
   &__link {
-    display: block;
     margin-top: var(--s-p-margin-top);
   }
 

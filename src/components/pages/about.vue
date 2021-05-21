@@ -24,7 +24,7 @@
       <a
         :href = about.cvdoc
         target="_blank"
-        class="about__link"
+        class="about__link cta"
       >
         {{about.cvlabel}}
       </a>
@@ -88,6 +88,16 @@
           {{skill.skill}}
         </span>
       </div>
+
+      <h3 class="about__subtitle subline">
+        {{about.clientstitle}}
+      </h3>
+
+      <p
+        v-html="getHTMLfromMD(about.clients)"
+        class="about__clients"
+      >
+      </p>
     </div>
 
     <custom-footer></custom-footer>
