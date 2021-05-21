@@ -150,10 +150,6 @@ p {
 
   $el: #{&};
 
-  position: fixed;
-  top: var(--s-gutter);
-  left: var(--s-gutter);
-  margin-top: calc(var(--s-title) * -0.4);
   font-weight: bold;
 
   a {
@@ -176,12 +172,50 @@ p {
 }
 
 .navigation {
+  $root:#{&};
+
   position: fixed;
   z-index: 10;
-  top: var(--s-gutter);
-  right: var(--s-gutter);
-  font-size: var(--s-text-s);
-  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: calc(var(--s-gutter) * 3);
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity linear 1s;
+
+    #{$root}.is-minified & {
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--s-gutter);
+    box-sizing: border-box;
+    font-size: var(--s-text-s);
+    font-weight: bold;
+    transform: translateY(0);
+    transition: transform var(--e-inout) 1s;
+
+    #{$root}.is-minified & {
+      transform: translateY(calc(var(--s-gutter) * -0.5));
+    }
+  }
+
+  &__logo {
+    position: relative;
+    margin-top: calc(var(--s-title) * -0.4);
+  }
 
   &__link {
     @include cta();
