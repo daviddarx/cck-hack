@@ -2,27 +2,34 @@
 <template>
   <div
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
+    class="projects"
   >
-    <h2>
-      {{projects.title}}
-    </h2>
+    <div class="content__centered">
 
-    <div
-      v-html="getHTMLfromMD(projects.content)"
-    >
-    </div>
+      <span class="projects__subline subline"> {{projects.subline}} </span>
 
-    <div>
-      <div
-        v-for="project in list"
-        :key="project.title"
-        ref="project"
+      <h2 class="projects__title content__title">
+        {{projects.title}}
+      </h2>
+
+      <p
+        v-html="getHTMLfromMD(projects.lead)"
+        class="projects__lead"
       >
-        <router-link
-          v-bind:to="'/projekte/'+project.uuid"
+      </p>
+
+      <div>
+        <div
+          v-for="project in list"
+          :key="project.title"
+          ref="project"
         >
-          {{project.title}}
-        </router-link>
+          <router-link
+            v-bind:to="'/projekte/'+project.uuid"
+          >
+            {{project.title}}
+          </router-link>
+        </div>
       </div>
     </div>
 
