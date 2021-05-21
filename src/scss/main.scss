@@ -74,7 +74,7 @@ p {
   margin-top: var(--s-p-margin-top);
 }
 
-@mixin cta() {
+@mixin tag() {
   --s-padding: 1.4em;
   --s-padding-modifier-top: 0.5;
   --s-padding-modifier-bottom: 0.45;
@@ -88,6 +88,18 @@ p {
   padding-top: calc(var(--s-padding) * var(--s-padding-modifier-top));
   padding-bottom: calc(var(--s-padding) * var(--s-padding-modifier-bottom));
   border-radius: calc(var(--s-padding) * 1.5);
+  background-color: var(--c-tag);
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.tag {
+  @include tag();
+}
+
+@mixin cta() {
+  @include tag();
+
   border: 2px solid var(--c-title);
   background-color: var(--c-bg);
   transition: color, border-color, background-color;
@@ -177,6 +189,8 @@ p {
     --s-margin: 2em;
 
     margin-left: var(--s-margin);
+    margin-right: 0;
+    margin-bottom: 0;
     text-transform: uppercase;
 
     &--secondary {
@@ -277,6 +291,7 @@ p {
 
   &__link {
     margin-top: var(--s-p-margin-top);
+    margin-bottom: 0;
   }
 
   &__position {
