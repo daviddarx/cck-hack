@@ -14,7 +14,9 @@
 
       <img
         :src = about.image
-        class="about__img"
+        @load="imgLoaded"
+        alt="Cédric Knapp"
+        class="img-to-load about__img"
       >
 
       <p
@@ -113,12 +115,16 @@
   import CustomFooter from '../footer.vue';
   import contents from '../../contents';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import imgToLoad from '../../mixins/imgToLoad';
 
   export default Vue.extend({
     components: {
       'custom-footer': CustomFooter,
     },
-    mixins: [getHTMLfromMDMixin],
+    mixins: [
+      getHTMLfromMDMixin,
+      imgToLoad
+    ],
     data() {
       return {
         about: contents.about,
