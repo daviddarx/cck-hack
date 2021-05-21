@@ -8,6 +8,7 @@
       class="navigation__container"
       v-if="this.isDisplayed"
     >
+      <logo></logo>
       <div class="navigation__links">
         <h2 class="visually-hidden">Navigation</h2>
 
@@ -29,8 +30,12 @@
 <script>
   import Vue from "vue";
   import debounce from 'lodash/debounce';
+  import Logo from './logo.vue';
 
   export default Vue.extend({
+    components: {
+      'logo': Logo
+    },
     data() {
       return {
         isDisplayed: false,

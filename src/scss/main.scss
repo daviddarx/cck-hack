@@ -185,13 +185,14 @@ p {
   width: 100%;
 
   &__container {
+    display: flex;
+    justify-content: space-between;
     padding: var(--s-gutter);
     box-sizing: border-box;
     font-size: var(--s-text-s);
     font-weight: bold;
     transform: translateY(0);
     transition: transform var(--e-inout) var(--d-minified);
-    text-align: right;
 
     #{$root}.is-hidden & {
       transform: translateY(calc(var(--s-gutter) * -2));
