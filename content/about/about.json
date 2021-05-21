@@ -1,5 +1,4 @@
 {
-  "clientstitle": "Clients",
   "cvlabel": "CV herunterladen",
   "skills": [
     {
@@ -19,7 +18,7 @@
     }
   ],
   "cvdoc": "/images/uploads/sample.pdf",
-  "clients": "HfH, Interkantonale Hochschule für Heilpädagogik\\\nUZH – Univesität Zürich\\\nUniverstität Luzern\\\nETH Zürich\\\nMAZ, Die Schweizer Journalistenschule\\\nAxa Winterthur Versicherung\\\nMobiliär Versicherung\\\nASO Auslandschweizer-Organisation\\\nSwissAid\\\nAntidoping Schweiz\\\ndeza.admin.ch\\\nSwisscom\\\nCoop\\\nInterdiscount\\\nMicrospot.ch\\\nMammut Sport\\\nUEFA\\\nSt.Morritz, Engadin Mountains\\\nJungfrau Region\\\nFlughafen Zürich\\\nOlma Messen St.Gallen\\\nSwisslos.ch\\\nMediData\\\nStadt Winterthur\\\nEPFL Lausanne\\\nMontreux Jazz Festival\\\nImages Festival Vevey\\\nGastroFribourg\\\nL//P\\\nu.v.m.",
+  "clients": "HfH (Interkantonale Hochschule für Heilpädagogik) UZH – Univesität Zürich, Universtität, Luzern, ETH Zürich, MAZ, Die Schweizer Journalistenschule, Axa Winterthur Versicherung, Mobiliär Versicherung, ASO Auslandschweizer-OrganisationSwissAid, Antidoping Schweiz, deza.admin.ch, Swisscom, Coop, Interdiscount, Microspot.ch, Mammut Sport, UEFA, St.Morritz, Engadin Mountains, Jungfrau Region, Flughafen Zürich, Olma Messen St.Gallen, Swisslos.ch, MediData, Stadt, Winterthur, EPFL Lausanne, Montreux Jazz Festival, Images Festival Vevey, GastroFribourg, L//P, u.v.m.",
   "positions": [
     {
       "dates": "2018 – Heute",
@@ -38,6 +37,7 @@
     }
   ],
   "positionstitle": "Experience",
+  "clientstitle": "Clients",
   "subline": "About",
   "skillstitle": "Skills",
   "title": "In eget pharetra felis. Nam dictum finibus mi, non pretium nulla laoreet pretium.",
@@ -56,6 +56,6 @@
     }
   ],
   "image": "/images/uploads/cedric-knapp.jpg",
-  "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris.",
+  "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. \n\nNam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris.",
   "languagestitle": "Languages"
 }
