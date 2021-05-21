@@ -272,6 +272,8 @@ p {
 }
 
 .projects-list {
+  $root: #{&};
+
   &__link {
     text-decoration: none;
   }
@@ -280,6 +282,16 @@ p {
     @include h3();
 
     margin-top: 0.5em;
+    transition: color var(--e-text-content) var(--d-text-content);
+
+    #{$root}:hover & {
+      color: var(--c-text);
+    }
+  }
+
+  &__tags {
+    font-size: var(--s-text-s);
+    margin-top: 2em;
   }
 }
 
