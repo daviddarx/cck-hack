@@ -6,6 +6,7 @@
 @mixin fontTitle() {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  color: var(--c-title);
 }
 
 // utilities
