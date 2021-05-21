@@ -61,7 +61,7 @@
       >
         <div
           v-for="(vid, i) in content.videos"
-          :key="vid.vimeourl+i"
+          :key="vid.vimeoid+i"
           class="project__video"
         >
           <vimeo-player
