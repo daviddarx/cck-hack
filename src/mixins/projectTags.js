@@ -8,8 +8,6 @@ export default {
         DOM += `<span class="tag">${tag}</span>`;
       });
 
-      console.log(DOM);
-
       return DOM;
     }
   }
