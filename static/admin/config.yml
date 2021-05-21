@@ -54,7 +54,9 @@ collections:
 
       - label: "Lead"
         name: "lead"
-        widget: "text"
+        widget: "markdown"
+          buttons:
+            - link
 
       - label: "Image"
         name: "image"
