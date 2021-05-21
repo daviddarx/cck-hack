@@ -2,53 +2,127 @@
 <template>
   <div
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
+    class="project"
   >
-    <h2>
-      {{content.title}}
-    </h2>
+    <div class="content__centered">
 
-    <p>
-      {{content.desc}}
-    </p>
 
-    <img
-      :src = content.image
-      :alt = content.title
-      class = "img-to-load"
-      @load="imgLoaded"
-    >
+      <h2 class="project__subline subline"> {{content.subline}} </h2>
 
-    <div>
+      <span class="project__year">
+        {{content.year}}
+      </span>
+      <span class="project__agency">
+        {{content.agency}}
+      </span>
+
+      <div class="project__title content__title">
+        {{content.title}}
+      </div>
+
       <div
-        v-if="content.additionalImages"
+        v-html="getProjectTags(content.tags)"
+        class="project__tags"
+      >
+      </div>
+
+      <div class="project__metas">
+
+      </div>
+
+      <div
+        v-html="getHTMLfromMD(content.lead)"
+        class="project__lead"
+      >
+      </div>
+
+      <div
+        v-if="content.images"
+        class="project__images"
       >
         <div
-          v-for="(img, i) in content.additionalImages"
+          v-for="(img, i) in content.images"
           :key="img.image+i"
           ref="image"
+          class="project__image"
         >
           <img
             :src = img.image
             :alt = content.title
-            class = "img-to-load"
+            class = "img-to-load project__image-el"
             @load="imgLoaded"
           >
         </div>
       </div>
+
+      <div
+        v-if="content.videos"
+        class="project__videos"
+      >
+        <div
+          v-for="(vid, i) in content.videos"
+          :key="vid.vimeourl+i"
+          class="project__video"
+        >
+          {{ vid.vimeourl }}
+        </div>
+      </div>
+
+      <h3 class="content__subtitle subline">
+        Links
+      </h3>
+
+      <div
+        v-if="content.links"
+        class="project__links"
+      >
+        <a
+          v-for="(link, i) in content.links"
+          :key="link.linkurl+i"
+          :href="link.linkurl"
+          target="_blank"
+          class="project__link"
+        >
+          {{ link.linklabel }}
+        </a>
+      </div>
+
+      <h3 class="content__subtitle subline">
+        Credits
+      </h3>
+
+      <div
+        v-if="content.credits"
+        v-html="getHTMLfromMD(content.credits)"
+        class="project__credits"
+      >
+      </div>
     </div>
 
-
-    <div>
+    <div class="project__pagination pagination">
       <router-link
         v-bind:to="this.linkPrev.path"
+        class="pagination__link-prev"
       >
-        &#8592; {{this.linkPrev.title}}
+        <span class="pagination__subline subline">
+          Prev
+        </span>
+
+        <span class="pagination__title">
+          {{this.linkPrev.title}}
+        </span>
       </router-link>
-      &nbsp;
       <router-link
         v-bind:to="this.linkNext.path"
+        class="pagination__link-next"
       >
-        {{this.linkNext.title}} &#8594;
+        <span class="pagination__subline subline">
+          Next
+        </span>
+
+        <span class="pagination__title">
+          {{this.linkNext.title}}
+        </span>
       </router-link>
     </div>
 
@@ -62,6 +136,7 @@
   import contents from '../../contents';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import imgToLoad from '../../mixins/imgToLoad';
+  import projectTags from '../../mixins/projectTags';
 
   export default Vue.extend({
     components: {
@@ -69,7 +144,8 @@
     },
     mixins: [
       getHTMLfromMDMixin,
-      imgToLoad
+      imgToLoad,
+      projectTags
     ],
     computed: {
       content: function () {

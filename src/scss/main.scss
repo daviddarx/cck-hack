@@ -62,7 +62,7 @@ h2 {
 
 b,
 strong {
-  @include fontTitle();
+  font-weight: bold;
 }
 
 a {
@@ -274,6 +274,8 @@ p {
 .projects-list {
   $root: #{&};
 
+  margin-top: var(--s-vertical-spacing);
+
   &__link {
     text-decoration: none;
   }
@@ -292,6 +294,80 @@ p {
   &__tags {
     font-size: var(--s-text-s);
     margin-top: 2em;
+  }
+}
+
+.project {
+  &__subline {
+    display: inline-block;
+  }
+
+  &__year,
+  &__agency {
+    font-size: var(--s-text-s);
+    margin-left: 3em;
+  }
+
+  &__tags {
+    font-size: var(--s-text-s);
+    margin-top: 3em;
+  }
+
+  &__images,
+  &__videos {
+    margin-top: var(--s-vertical-spacing);
+  }
+
+  &__image,
+  &__video {
+    margin-top: calc(var(--s-vertical-spacing) * 0.5);
+  }
+
+  &__image-el {
+    display: block;
+    width: 100%;
+  }
+
+  &__link {
+    display: table;
+  }
+
+  &__credits {
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__pagination {
+    margin-top: var(--s-vertical-spacing);
+  }
+}
+
+.pagination {
+  display: flex;
+
+  &__link-prev,
+  &__link-next {
+    --s-padding: var(--s-gutter);
+
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &__link-prev {
+    padding-right: var(--s-padding);
+  }
+
+  &__link-next {
+    padding-left: var(--s-padding);
+  }
+
+  &__title {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+    color: var(--c-title);
   }
 }
 
