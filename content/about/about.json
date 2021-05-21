@@ -1,4 +1,5 @@
 {
+  "contact": "Cédric Knapp \n\nMusterstrasse 23\\\n6000 Winterthur\n\n[talk@justknapp.com](mailto:talk@justknapp.com)\\\n+41 77 425 60 66",
   "cvlabel": "CV herunterladen",
   "skills": [
     {
@@ -40,6 +41,7 @@
   "clientstitle": "Clients",
   "subline": "About",
   "skillstitle": "Skills",
+  "contacttitle": "Contact",
   "title": "In eget pharetra felis. Nam dictum finibus mi, non pretium nulla laoreet pretium.",
   "languages": [
     {
