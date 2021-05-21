@@ -91,6 +91,9 @@ p {
   background-color: var(--c-tag);
   margin-right: 1em;
   margin-bottom: 1em;
+  transition: color, border-color, background-color;
+  transition-timing-function: var(--e-text-content);
+  transition-duration: var(--d-text-content);
 }
 
 .tag {
@@ -102,9 +105,6 @@ p {
 
   border: 2px solid var(--c-title);
   background-color: var(--c-bg);
-  transition: color, border-color, background-color;
-  transition-timing-function: var(--e-out);
-  transition-duration: var(--d-text-content);
 
   &:hover {
     background-color: var(--c-title);
@@ -118,7 +118,7 @@ p {
 }
 
 @mixin text-link() {
-  transition: color var(--e-out) var(--d-text-content);
+  transition: color var(--e-text-content) var(--d-text-content);
 
   &:hover {
     color: var(--c-title);
@@ -162,7 +162,7 @@ p {
 
   &__title {
     font-size: var(--s-title);
-    transition: color var(--e-out) var(--d-text-content);
+    transition: color var(--e-text-content) var(--d-text-content);
 
     #{$el}:hover & {
       color: var(--c-text);
