@@ -202,10 +202,6 @@ collections:
         buttons:
           - link
 
-      - label: "Thumb"
-        name: "thumb"
-        widget: "image"
-
       - label: "Images"
         name: "images"
         widget: "list"
