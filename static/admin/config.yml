@@ -133,6 +133,16 @@ collections:
         name: "clients"
         widget: "markdown"
 
+      - label: "Contact Title"
+        name: "contacttitle"
+        widget: "string"
+
+      - label: "Contact"
+        name: "contact"
+        widget: "markdown"
+        buttons:
+          - link
+
   - name: "projects"
     label: "Projects"
     create: false
