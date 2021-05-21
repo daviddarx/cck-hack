@@ -6,11 +6,11 @@
   >
     <div class="content__centered">
 
-      <span class="about__subline subline"> {{about.subline}} </span>
+      <h2 class="about__subline subline"> {{about.subline}} </h2>
 
-      <h2 class="about__title content__title">
+      <div class="about__title content__title">
         {{about.title}}
-      </h2>
+      </div>
 
       <img
         :src = about.image
@@ -19,11 +19,11 @@
         class="img-to-load about__img"
       >
 
-      <p
+      <div
         v-html="getHTMLfromMD(about.lead)"
         class="about__lead"
       >
-      </p>
+      </div>
 
       <a
         :href = about.cvdoc
@@ -99,11 +99,11 @@
         {{about.clientstitle}}
       </h3>
 
-      <p
+      <div
         v-html="getHTMLfromMD(about.clients)"
         class="about__clients"
       >
-      </p>
+      </div>
     </div>
 
     <custom-footer></custom-footer>
