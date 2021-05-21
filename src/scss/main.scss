@@ -176,7 +176,7 @@ p {
 .navigation {
   $root:#{&};
 
-  --d-minified: 0.5s;
+  --d-transition: 0.8s;
 
   position: fixed;
   z-index: 10;
@@ -194,7 +194,7 @@ p {
     font-size: var(--s-text-s);
     font-weight: bold;
     transform: translateY(0);
-    transition: transform var(--e-inout) var(--d-minified);
+    transition: transform var(--e-inout) var(--d-transition);
 
     #{$root}.is-hidden & {
       transform: translateY(calc(var(--s-gutter) * -2));
