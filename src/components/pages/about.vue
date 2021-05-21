@@ -104,6 +104,16 @@
         class="about__clients"
       >
       </div>
+
+      <h3 class="content__subtitle subline">
+        {{about.contacttitle}}
+      </h3>
+
+      <div
+        v-html="getHTMLfromMD(about.contact)"
+        class="about__contact"
+      >
+      </div>
     </div>
 
     <custom-footer></custom-footer>
