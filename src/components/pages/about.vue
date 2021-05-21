@@ -12,14 +12,14 @@
         {{about.title}}
       </h2>
 
-      <p class="about__lead">
-        {{about.lead}}
-      </p>
-
       <img
         :src = about.image
         class="about__img"
       >
+
+      <p class="about__lead">
+        {{about.lead}}
+      </p>
 
       <a
         :href = about.cvdoc
@@ -33,19 +33,24 @@
         {{about.positionstitle}}
       </h3>
 
-      <div
-        v-for="position in about.positions"
-        v-bind:key="position.title"
-      >
-        <span>
-          {{position.dates}}
-        </span>
-        <h4>
-          {{position.agency}}
-        </h4>
+      <div class="about__positions">
         <div
-          v-html="getHTMLfromMD(position.description)"
+          v-for="position in about.positions"
+          v-bind:key="position.title"
+          class="about__position"
         >
+          <h4 class="about__position-title">
+            {{position.agency}}
+
+            <span class="about__position-dates subline">
+              {{position.dates}}
+            </span>
+          </h4>
+          <div
+            class="about__position-desc"
+            v-html="getHTMLfromMD(position.description)"
+          >
+          </div>
         </div>
       </div>
 
@@ -53,16 +58,19 @@
         {{about.languagestitle}}
       </h3>
 
-      <div
-        v-for="language in about.languages"
-        v-bind:key="language.title"
-        ref="language"
-      >
-        <span>
-          {{language.language}}
-        </span>
-        <div>
-          {{language.level}}
+      <div class="about__languages">
+        <div
+          v-for="language in about.languages"
+          v-bind:key="language.title"
+          ref="language"
+          class="about__language"
+        >
+          <span class="about__language-title">
+            {{language.language}}
+          </span>
+          <div class="about__language-value value">
+            {{language.level}}
+          </div>
         </div>
       </div>
 
@@ -70,12 +78,16 @@
         {{about.skillstitle}}
       </h3>
 
-      <span
-        v-for="skill in about.skills"
-        v-bind:key="skill.title"
-      >
-        {{skill.skill}}
-      </span>
+      <div class="about__skills">
+        <span
+          v-for="skill in about.skills"
+          v-bind:key="skill.title"
+          class="about__skills"
+
+        >
+          {{skill.skill}}
+        </span>
+      </div>
     </div>
 
     <custom-footer></custom-footer>

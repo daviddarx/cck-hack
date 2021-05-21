@@ -102,6 +102,21 @@ a {
   @include text-link();
 }
 
+.subline {
+  font-size: var(--s-text-s);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.img-to-load {
+  opacity: 0;
+  transition: opacity linear 2s;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
 .logo {
   --s-title: calc(var(--s-text-s) * 2);
 
@@ -169,6 +184,8 @@ a {
 }
 
 .content {
+  --s-vertical-spacing: calc(var(--s-gutter) * 2);
+
   position: relative;
   margin-top: 30vh;
   box-sizing: border-box;
@@ -209,12 +226,34 @@ a {
   opacity: 1;
 }
 
-.img-to-load {
-  opacity: 0;
-  transition: opacity linear 2s;
+.about {
+  &__img {
+    width: 100%;
+    margin-top: var(--s-vertical-spacing);
+  }
 
-  &.loaded {
-    opacity: 1;
+  &__link {
+    display: block;
+    margin-top: var(--s-p-margin-top);
+  }
+
+  &__subtitle {
+    margin-top: var(--s-vertical-spacing);
+    margin-bottom: calc(var(--s-vertical-spacing) * 0.5);
+  }
+
+  &__position {
+    margin-top: var(--s-vertical-spacing);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__position-dates {
+    display: inline-block;
+    color: var(--c-text);
+    transform: translate(1em, -0.75em);
   }
 }
 
