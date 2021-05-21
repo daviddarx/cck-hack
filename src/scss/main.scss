@@ -182,12 +182,14 @@ p {
   z-index: 10;
   top: 0;
   left: 0;
+  height: 0;
   width: 100%;
 
   &__container {
     display: flex;
     justify-content: space-between;
     padding: var(--s-gutter);
+    padding-bottom: 0;
     box-sizing: border-box;
     font-size: var(--s-text-s);
     font-weight: bold;
@@ -228,6 +230,7 @@ p {
       #{$root}.is-hidden & {
         opacity: 0;
         transition-delay: 0.5s;
+        pointer-events: none;
       }
     }
 
