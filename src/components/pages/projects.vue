@@ -21,7 +21,7 @@
       <div class="projects__listing">
         <div
           v-for="project in list"
-          :key="project.title"
+          :key="project.uuid"
           ref="project"
           class="projects-list"
         >
