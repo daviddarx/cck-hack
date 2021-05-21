@@ -17,8 +17,10 @@
         class="about__img"
       >
 
-      <p class="about__lead">
-        {{about.lead}}
+      <p
+        v-html="getHTMLfromMD(about.lead)"
+        class="about__lead"
+      >
       </p>
 
       <a
@@ -39,9 +41,10 @@
           v-bind:key="position.title"
           class="about__position"
         >
-          <h4 class="about__position-title">
-            {{position.agency}}
-
+          <h4>
+            <span class="about__position-title">
+              {{position.agency}}
+            </span>
             <span class="about__position-dates subline">
               {{position.dates}}
             </span>

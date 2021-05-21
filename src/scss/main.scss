@@ -213,7 +213,7 @@ a {
   }
 
   .cta {
-    margin-top: var(--s-p-margin-top);
+    margin-top: calc(var(--s-p-margin-top) * 1.3);
   }
 
   p {
@@ -255,10 +255,14 @@ a {
     }
   }
 
+  &__position-title {
+    font-size: var(--s-h2);
+  }
+
   &__position-dates {
     display: inline-block;
     color: var(--c-text);
-    transform: translate(1em, -0.75em);
+    transform: translate(1em, -2em);
   }
 }
 
