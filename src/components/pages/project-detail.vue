@@ -64,7 +64,14 @@
           :key="vid.vimeourl+i"
           class="project__video"
         >
-          {{ vid.vimeourl }}
+          <vimeo-player
+            ref="player"
+            :video-id="vid.vimeoid"
+            :options="{'responsive':true}"
+            class="project__video-el"
+
+          >
+          </vimeo-player>
         </div>
       </div>
 
@@ -131,6 +138,7 @@
 </template>
 
 <script>
+  import { vueVimeoPlayer } from 'vue-vimeo-player'
   import Vue from "vue";
   import CustomFooter from '../footer.vue';
   import contents from '../../contents';
@@ -138,9 +146,12 @@
   import imgToLoad from '../../mixins/imgToLoad';
   import projectTags from '../../mixins/projectTags';
 
+  Vue.use(vueVimeoPlayer);
+
   export default Vue.extend({
     components: {
       'custom-footer': CustomFooter,
+      'vimeo-player': vueVimeoPlayer,
     },
     mixins: [
       getHTMLfromMDMixin,

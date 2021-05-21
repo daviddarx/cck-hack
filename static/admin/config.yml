@@ -216,8 +216,8 @@ collections:
         widget: "list"
         required: false
         fields:
-          - label: "Vimeo URL"
-            name: "vimeourl"
+          - label: "Vimeo ID"
+            name: "vimeoid"
             widget: "string"
 
       - label: "Links"
