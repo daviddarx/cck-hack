@@ -6,17 +6,17 @@
   >
     <div class="content__centered">
 
-      <span class="projects__subline subline"> {{projects.subline}} </span>
+      <h2 class="projects__subline subline"> {{projects.subline}} </h2>
 
-      <h2 class="projects__title content__title">
+      <div class="projects__title content__title">
         {{projects.title}}
-      </h2>
+      </div>
 
-      <p
+      <div
         v-html="getHTMLfromMD(projects.lead)"
         class="projects__lead"
       >
-      </p>
+      </div>
 
       <div>
         <div
