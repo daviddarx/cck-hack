@@ -229,6 +229,9 @@ collections:
         widget: "list"
         required: false
         fields:
+          - label: "Link Label"
+            name: "linklabel"
+            widget: "string"
           - label: "Link URL"
             name: "linkurl"
             widget: "string"
