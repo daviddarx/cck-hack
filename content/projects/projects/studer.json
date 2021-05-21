@@ -1,7 +1,51 @@
 {
-  "uuid": "studer",
+  "agency": "Eyekon AG",
+  "date": "2021-05-06T06:02:20.865Z",
+  "subline": "Distillerie Studer",
+  "thumb": "/images/uploads/studer_thumb.jpg",
   "title": "Wieso Stories auf der Rückseite verstecken?",
-  "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla elementum scelerisque. Fusce a velit a erat venenatis aliquam ornare sed arcu.",
-  "thumb": "/images/uploads/sample4.jpg",
-  "date": "2021-05-06T06:02:20.865Z"
+  "images": [
+    {
+      "image": "/images/uploads/studer_01.png"
+    },
+    {
+      "image": "/images/uploads/studer_02.png"
+    },
+    {
+      "image": "/images/uploads/studer_03.jpg"
+    },
+    {
+      "image": "/images/uploads/studer_04.jpg"
+    },
+    {
+      "image": "/images/uploads/studer_05.jpg"
+    },
+    {
+      "image": "/images/uploads/studer_06.jpg"
+    },
+    {
+      "image": "/images/uploads/studer_07.png"
+    }
+  ],
+  "videos": [
+    {
+      "vimeourl": "https://vimeo.com/347119375"
+    },
+    {
+      "vimeourl": "https://vimeo.com/347119375"
+    }
+  ],
+  "tags": "Branding, Konzept, Storytelling, Positionierung",
+  "links": [
+    {
+      "linkurl": "http://www.example.com/"
+    },
+    {
+      "linkurl": "http://www.example.com/"
+    }
+  ],
+  "credits": "Hans Muster – Design\n\nMuster Hans – Konzeption\n\nKunden XY – Mühsam sein",
+  "uuid": "studer",
+  "lead": "Man kennt’s: Irgendein schönes Logo auf der Etikette, vielleicht noch eine Illustration, entweder hip reduziert oder bunt überfüllt – Hauptsache abheben von der Konkurrenz im Spirituosenregal. Erzählt wird dann auf der Rückseite der Flasche, von Tradition, Handwerk und Geschmack. Nicht so beim **Rebranding-Konzept** für die Distillerie Studer aus dem Emmental: hier rückt die Geschichte in den Vordergrund. Das schafft Spielraum für Kommunikation und eine auffällige, sprechende Marke.",
+  "year": "Oktober 2018"
 }
