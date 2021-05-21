@@ -27,15 +27,18 @@
         >
           <router-link
             v-bind:to="'/projekte/'+project.uuid"
+            class="projects-list__link"
           >
-            <h3 class="projects-list__subline">
+            <h3 class="projects-list__subline subline">
               {{project.subline}}
             </h3>
             <p class="projects-list__title">
               {{project.title}}
             </p>
-            <div class="projects-list__tags">
-              {{project.tags}}
+            <div
+              v-html="getProjectTags(project.tags)"
+              class="projects-list__tags"
+            >
             </div>
           </router-link>
         </div>
@@ -51,12 +54,16 @@
   import CustomFooter from '../footer.vue';
   import contents from '../../contents';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import projectTags from '../../mixins/projectTags';
 
   export default Vue.extend({
     components: {
       'custom-footer': CustomFooter,
     },
-    mixins: [getHTMLfromMDMixin],
+    mixins: [
+      getHTMLfromMDMixin,
+      projectTags
+    ],
     data() {
       return {
         projects: contents.projects,
