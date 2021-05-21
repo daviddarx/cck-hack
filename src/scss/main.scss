@@ -264,6 +264,34 @@ a {
     color: var(--c-text);
     transform: translate(1em, -2em);
   }
+
+  &__language {
+    display: flex;
+    margin-top: 1em;
+  }
+
+  &__language-title {
+    flex-basis: 25%;
+  }
+
+  &__language-value {
+    span {
+      --s: 0.75em;
+
+      display: inline-block;
+      width: var(--s);
+      height: var(--s);
+      background-color: var(--c-title);
+      margin-right: 1em;
+      border-radius: 50%;
+      opacity: 0.5;
+
+      &.active {
+        background-color: var(--c-text);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .footer {

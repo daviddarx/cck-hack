@@ -1,7 +1,7 @@
 
 <template>
   <div
-    v-bind:class="{ 'is-displayed': this.isDisplayed }"
+    :class="{ 'is-displayed': this.isDisplayed }"
     class="about"
   >
     <div class="content__centered">
@@ -38,7 +38,7 @@
       <div class="about__positions">
         <div
           v-for="position in about.positions"
-          v-bind:key="position.title"
+          :key="position.title"
           class="about__position"
         >
           <h4>
@@ -64,7 +64,8 @@
       <div class="about__languages">
         <div
           v-for="language in about.languages"
-          v-bind:key="language.title"
+          :key="language.title"
+          :rel="language.title"
           ref="language"
           class="about__language"
         >
@@ -84,7 +85,7 @@
       <div class="about__skills">
         <span
           v-for="skill in about.skills"
-          v-bind:key="skill.title"
+          :key="skill.title"
           class="about__skills"
 
         >
@@ -126,13 +127,31 @@
     },
     mounted () {
       setTimeout(this.display, 100);
-    },
 
+      this.setLanguagesLevels();
+    },
     methods: {
       display: function () {
         if (this.$parent.isLoaded == true) {
           this.isDisplayed = true;
         }
+      },
+      setLanguagesLevels: function () {
+        this.$refs.language.forEach(language => {
+          const value = language.querySelector('.value')
+          const level = parseInt(value.innerHTML);
+
+          value.innerHTML = '';
+
+          for (let i = 0; i < 5; i++) {
+            const span = document.createElement("span");
+
+            if (i <= level - 1) {
+              span.classList.add('active');
+            }
+            value.appendChild(span);
+          }
+        });
       }
     }
   });
