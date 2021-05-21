@@ -38,10 +38,12 @@
   "tags": "Branding, Konzept, Storytelling, Positionierung",
   "links": [
     {
-      "linkurl": "http://www.example.com/"
+      "linkurl": "http://www.example.com/",
+      "linklabel": "Link 1"
     },
     {
-      "linkurl": "http://www.example.com/"
+      "linkurl": "http://www.example.com/",
+      "linklabel": "Link 2"
     }
   ],
   "credits": "Hans Muster – Design\n\nMuster Hans – Konzeption\n\nKunden XY – Mühsam sein",
