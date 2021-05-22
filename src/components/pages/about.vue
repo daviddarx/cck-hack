@@ -88,7 +88,7 @@
         <span
           v-for="skill in about.skills"
           :key="skill.title"
-          class="about__skills"
+          class="about__skill tag"
 
         >
           {{skill.skill}}
