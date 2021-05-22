@@ -248,3 +248,22 @@ collections:
         buttons:
           - link
 
+  - name: "transitions"
+    label: "Transitions"
+    create: false
+    delete: false
+    folder: "content/transitions/"
+    slug: "transitions"
+    extension: "json"
+    format: "json"
+    summary: "Transitions Words"
+    fields:
+      - label: "Words"
+        name: "words"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Word"
+            name: "word"
+            widget: "string"
+
