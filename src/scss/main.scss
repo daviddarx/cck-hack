@@ -220,6 +220,7 @@ p {
       background-color: var(--c-bg);
       border-color: var(--c-bg);
       transition: color var(--e-text-content) var(--d-text-content), opacity 0.4s linear;
+      text-transform: none;
 
       &:hover {
         color: var(--c-title);
