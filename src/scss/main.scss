@@ -458,14 +458,12 @@ p {
       display: inline-block;
       width: var(--s);
       height: var(--s);
-      background-color: var(--c-title);
+      background-color: var(--c-tag);
       margin-right: 1em;
-      border-radius: 50%;
-      opacity: 0.5;
+      border-radius: 100%;
 
       &.active {
-        background-color: var(--c-text);
-        opacity: 1;
+        background-color: var(--c-title);
       }
     }
   }
