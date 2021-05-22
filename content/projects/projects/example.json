@@ -1,7 +1,7 @@
 {
-  "agency": "Eyekon AG",
+  "agency": "Eyekon",
   "date": "2021-05-04T06:02:20.865Z",
-  "subline": "Eyekon",
+  "subline": "Example",
   "title": "Wieso Stories auf der Rückseite verstecken?",
   "images": [
     {
@@ -40,7 +40,7 @@
     }
   ],
   "credits": "Hans Muster – Design\n\nMuster Hans – Konzeption\n\nKunden XY – Mühsam sein",
-  "uuid": "eyekon",
+  "uuid": "example",
   "lead": "Man kennt’s: Irgendein schönes Logo auf der Etikette, vielleicht noch eine Illustration, entweder hip reduziert oder bunt überfüllt – Hauptsache abheben von der Konkurrenz im Spirituosenregal. Erzählt wird dann auf der Rückseite der Flasche, von Tradition, Handwerk und Geschmack. Nicht so beim **Rebranding-Konzept** für die Distillerie Studer aus dem Emmental: hier rückt die Geschichte in den Vordergrund. Das schafft Spielraum für Kommunikation und eine auffällige, sprechende Marke.",
   "year": "Oktober 2018"
 }
