@@ -1,7 +1,4 @@
 {
-  "title": "Non pretium nulla laoreet pretium.",
-  "subline": "Portfolio ",
-  "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl.",
   "words": [
     {
       "word": "Content"
@@ -17,6 +14,21 @@
     },
     {
       "word": "Kurz & Knackig"
+    },
+    {
+      "word": "Charakter"
+    },
+    {
+      "word": "Verspielt"
+    },
+    {
+      "word": "Corporate"
+    },
+    {
+      "word": "Tonalität"
+    },
+    {
+      "word": "Redaktionell"
     },
     {
       "word": "Socials"
