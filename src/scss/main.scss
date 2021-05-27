@@ -103,7 +103,7 @@ p {
 @mixin cta() {
   @include tag();
 
-  border: 2px solid var(--c-title);
+  border: var(--s-line) solid var(--c-title);
   background-color: var(--c-bg);
 
   &:hover {
@@ -477,7 +477,7 @@ p {
   display: flex;
   justify-content: space-between;
   font-size: var(--s-text-s);
-  border-top: 2px var(--c-title) solid;
+  border-top: var(--s-line) var(--c-title) solid;
   padding-top: 1em;
   margin-top: calc(var(--s-gutter) * 2);
   padding-bottom: var(--s-gutter);
