@@ -2,13 +2,13 @@
 <template>
   <nav
     class="navigation"
-    v-bind:class="{ 'is-minified': this.isNavMinified, 'is-hidden': this.isNavHidden }"
+    v-bind:class="{ 'is-minified': this.isNavMinified, 'is-hidden': this.isNavHidden, 'is-mobile-opened': this.isNavMobileOpened }"
   >
     <div
       class="navigation__container"
       v-if="this.isDisplayed"
     >
-      <logo></logo>
+      <logo class="navigation__logo"></logo>
       <div class="navigation__links">
         <h2 class="visually-hidden">Navigation</h2>
 
@@ -21,8 +21,26 @@
         --><router-link
           class="navigation__link"
           to="/about"
-        >About</router-link>
+        >About</router-link><!--
+        --><router-link
+          class="navigation__link"
+          to="/home"
+        >Home</router-link>
       </div>
+
+      <div
+        v-bind:class="{'is-close' : this.isNavMobileOpened}"
+        v-on:click="this.toggleMobileNavigation"
+        class="navigation__burger burger"
+      >
+        <div class="burger__bar burger__bar--01"></div>
+        <div class="burger__bar burger__bar--02"></div>
+        <div class="burger__bar burger__bar--03"></div>
+      </div>
+      <div
+        v-on:click="this.toggleMobileNavigation"
+        class="navigation__mobile-background"
+      ></div>
     </div>
   </nav>
 </template>
@@ -41,6 +59,7 @@
         isDisplayed: false,
         isNavMinified: false,
         isNavHidden: false,
+        isNavMobileOpened: false,
         scrollDebounced: undefined,
         scrollTopRatioToHide: 0.01,
         scrollTop: 0,
@@ -50,12 +69,19 @@
     mounted () {
       requestAnimationFrame(this.displayNav);
 
+      this.$router.beforeEach(this.beforeEach);
+
       this.scrollDebounced = debounce(this.scrollListener, 10);
       window.addEventListener('scroll', this.scrollDebounced);
     },
     methods: {
       displayNav: function () {
         this.isDisplayed = true;
+      },
+      beforeEach: function (to, from, next) {
+        this.isNavMobileOpened = false;
+
+        next();
       },
       scrollListener: function () {
         const windowH = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -74,8 +100,10 @@
 
         this.scrollTopLast = this.scrollTop <= 0 ? 0 : this.scrollTop;
       },
+      toggleMobileNavigation: function () {
+        this.isNavMobileOpened = !this.isNavMobileOpened;
+      },
       destroy: function () {
-        this.stopAnimation();
         window.removeEventListener('scroll', this.scrollDebounced);
       }
     }

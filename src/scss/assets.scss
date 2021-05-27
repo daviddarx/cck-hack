@@ -16,7 +16,7 @@ $breakpoints: (
   'desktop': 'max-width: 1280px',
   'tablet': 'max-width: 1024px',
   'tablet-s': 'max-width: 768px',
-  'mobile-layout': 'max-width: 768px',
+  'mobile-layout': 'max-width: 1023px',
   'mobile-l': 'max-width: 560px',
   'mobile': 'max-width: 414px',
   'mobile-s': 'max-width: 320px',
@@ -103,7 +103,7 @@ $breakpoints: (
   --e-inout: cubic-bezier(0.77, 0, 0.175, 1); // quart
   --e-text-content: var(--e-out);
 
-  // @include viewport('desktop-xl') {
-  //   --s-text: 3rem;
-  // }
+  @include viewport ('mobile-layout') {
+    --s-text: 4rem;
+  }
 }
