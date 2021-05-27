@@ -70,7 +70,7 @@ collections:
         name: "cvdocde"
         widget: "file"
 
-        - label: "CV Label EN"
+      - label: "CV Label EN"
         name: "cvlabelen"
         widget: "string"
 
