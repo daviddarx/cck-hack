@@ -8,7 +8,7 @@
       v-on:after-enter="aferEnterIn"
     >
       <div
-        class="transition__bg"
+        class="transition__container"
         v-if="this.isDisplayingIn"
       >
         <div

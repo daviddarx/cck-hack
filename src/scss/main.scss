@@ -491,7 +491,7 @@ p {
 .transition {
   --s-margin: calc(var(--s-gutter) * 0.5);
 
-  &__bg {
+  &__container {
     position: fixed;
     z-index: 1000;
     top: var(--s-margin);
