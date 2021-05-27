@@ -16,15 +16,15 @@ let routes = [
   },
   {
     label: 'About',
-    path: '/ueber-mich',
+    path: '/about',
     name: 'about',
     component: About,
     meta: { pageTitle: 'About' }
   },
   {
-    label: 'Projekts',
-    path: '/projekte',
-    name: 'projects',
+    label: 'Portfolio',
+    path: '/portfolio',
+    name: 'portfolio',
     component: Projects,
     meta: { pageTitle: 'Projekte' }
   },
@@ -35,7 +35,7 @@ contents.projectsList.forEach((project, i) => {
   routes.push(
     {
       label: project.uuid,
-      path: '/projekte/'+project.uuid,
+      path: '/portfolio/'+project.uuid,
       name: project.uuid,
       component: ProjectDetail,
       meta: {

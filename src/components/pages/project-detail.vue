@@ -169,7 +169,7 @@
         const id = (this.id < this.projectsList.length - 1 ) ? this.id + 1: 0;
 
         return {
-          path: '/projekte/'+this.projectsList[id].uuid,
+          path: '/portfolio/'+this.projectsList[id].uuid,
           title: this.projectsList[id].title
         }
       },
@@ -177,7 +177,7 @@
         const id = (this.id == 0 ) ? this.projectsList.length - 1 : this.id - 1 ;
 
         return {
-          path: '/projekte/'+this.projectsList[id].uuid,
+          path: '/portfolio/'+this.projectsList[id].uuid,
           title: this.projectsList[id].title
         }
       }

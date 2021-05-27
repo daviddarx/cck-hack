@@ -26,7 +26,7 @@
           class="projects-list"
         >
           <router-link
-            v-bind:to="'/projekte/'+project.uuid"
+            v-bind:to="'/portfolio/'+project.uuid"
             class="projects-list__link"
           >
             <h3 class="projects-list__subline subline">

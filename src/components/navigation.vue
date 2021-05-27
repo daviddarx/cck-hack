@@ -16,11 +16,11 @@
         --><a href="tel:+41 77 425 60 66" class="navigation__link navigation__link--secondary navigation__phone">+41 77 425 60 66</a><!--
         --><router-link
           class="navigation__link"
-          to="/projekte"
+          to="/portfolio"
         >Portfolio</router-link><!--
         --><router-link
           class="navigation__link"
-          to="/ueber-mich"
+          to="/about"
         >About</router-link>
       </div>
     </div>

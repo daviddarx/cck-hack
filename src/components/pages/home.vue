@@ -16,7 +16,7 @@
 
       <router-link
         class="home__cta cta"
-        to="/projekte"
+        to="/portfolio"
       >
         {{home.buttonLabel}}
       </router-link>
