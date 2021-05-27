@@ -567,11 +567,6 @@ p {
     --duration: 0.3s;
   }
 
-  .transition-leave-active & {
-    --ease: var(--e-in);
-    --duration: 0.5s;
-  }
-
   .transition-enter & {
     --scale: 0.85;
 
