@@ -3,7 +3,6 @@
   <div
     class="transition"
   >
-
     <transition
       name="transition"
       v-on:after-enter="aferEnterIn"
@@ -67,10 +66,11 @@
 
       this.setWords();
 
-      document.body.addEventListener('click', ()=>{
-        this.updateWordsSets();
-        this.updateWordsPositions();
-      });
+      // for positioning preview, outside transition
+      // document.body.addEventListener('click', ()=>{
+      //   this.updateWordsSets();
+      //   this.updateWordsPositions();
+      // });
     },
     methods: {
       beforeEach: function (to, from, next) {
@@ -78,6 +78,10 @@
 
         this.isDisplayingIn = true;
         this.nextFunction = next;
+
+        // final setting, inside transition
+        this.updateWordsSets();
+        this.updateWordsPositions();
       },
       aferEnterIn: function() {
         document.body.classList.remove('transition-out');

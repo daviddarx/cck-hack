@@ -499,11 +499,20 @@ p {
   }
 
   &__words {
+    overflow: hidden;
+    pointer-events: none;
+    // positioning preview, outside transition
+    // position: fixed;
+    // z-index: 1000;
+    // top: var(--s-margin);
+    // left: var(--s-margin);
+    // width: calc(100vw - var(--s-margin) * 2);
+    // height: calc(100vh - var(--s-margin) * 2);
+    // background-color: var(--c-title);
+    // final setting, inside transition
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    pointer-events: none;
   }
 }
 
@@ -536,6 +545,10 @@ p {
   --pos-y: 50%;
   --s-font: 15vw;
   --s-font-modifier: 1;
+  --scale: 1;
+  --ease: linear;
+  --duration: 0s;
+  --delay: 0s;
 
   font-weight: bold;
   font-size: calc(var(--s-font) * var(--s-font-modifier));
@@ -543,16 +556,37 @@ p {
   top: var(--pos-y);
   left: var(--pos-x);
   pointer-events: none;
-  transform: scale(2) translate(-50%, -50%);
-  transform-origin: center center;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(var(--scale));
+  transition: transform var(--ease) var(--duration) var(--delay), visibility 0s var(--delay);
   white-space: nowrap;
   color: var(--c-bg);
 
   .transition-enter-active & {
-    color: red;
+    --ease: var(--e-out);
+    --duration: 0.3s;
+  }
+
+  .transition-leave-active & {
+    --ease: var(--e-in);
+    --duration: 0.5s;
+  }
+
+  .transition-enter & {
+    --scale: 0.85;
+
+    visibility: hidden;
+  }
+
+  .transition-enter-to & {
+    --scale: 1;
+
+    visibility: visible;
   }
 
   &--01 {
+    --delay: 0.1s;
+
     .pos-01 & {
       --pos-x: 20%;
       --pos-y: 20%;
@@ -573,6 +607,8 @@ p {
   }
 
   &--02 {
+    --delay: 0.3s;
+
     .pos-01 & {
       --pos-x: 40%;
       --pos-y: 50%;
@@ -593,6 +629,8 @@ p {
   }
 
   &--03 {
+    --delay: 0.4s;
+
     .pos-01 & {
       --pos-x: 70%;
       --pos-y: 85%;
