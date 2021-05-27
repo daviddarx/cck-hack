@@ -18,17 +18,31 @@
       }
 
       .splash {
+        --s-margin: calc(var(--s-gutter) * 0.5);
+
         position: fixed;
         z-index: 1000;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(103, 169, 255);
+        top: var(--s-margin);
+        left: var(--s-margin);
+        width: calc(100vw - var(--s-margin) * 2);
+        height: calc(100vh - var(--s-margin) * 2);
+        background-color: rgb(5, 43, 255);
+        transition: transform var(--e-in) 0.5s;
+        will-change: transform;
+      }
+
+      .splash__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 50vw;
+        font-weight: bold;
+        color: rgb(230, 230, 230);
+        transform: translate(-50%, -50%);
       }
 
       .splash.hidden {
-        display: none;
+        transform: translateY(calc(100% + var(--s-margin)));
       }
 
     </style>
@@ -66,6 +80,7 @@
 
 	<body>
     <div class="splash">
+      <div class="splash__logo">CK</div>
     </div>
 
     <div id="app"></div>
