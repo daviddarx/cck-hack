@@ -106,10 +106,12 @@ p {
   border: var(--s-line) solid var(--c-title);
   background-color: var(--c-bg);
 
-  &:hover {
-    background-color: var(--c-title);
-    border-color: var(--c-title);
-    color: var(--c-bg);
+  @include hover() {
+    &:hover {
+      background-color: var(--c-title);
+      border-color: var(--c-title);
+      color: var(--c-bg);
+    }
   }
 }
 
@@ -120,8 +122,10 @@ p {
 @mixin text-link() {
   transition: color var(--e-text-content) var(--d-text-content);
 
-  &:hover {
-    color: var(--c-title);
+  @include hover() {
+    &:hover {
+      color: var(--c-title);
+    }
   }
 }
 
@@ -166,8 +170,10 @@ p {
     font-size: var(--s-title);
     transition: color var(--e-text-content) var(--d-text-content);
 
-    #{$el}:hover & {
-      color: var(--c-text);
+    @include hover() {
+      #{$el}:hover & {
+        color: var(--c-text);
+      }
     }
   }
 
@@ -226,10 +232,12 @@ p {
       transition: color var(--e-text-content) var(--d-text-content), opacity 0.4s linear;
       text-transform: none;
 
-      &:hover {
-        color: var(--c-title);
-        background-color: var(--c-bg);
-        border-color: var(--c-bg);
+      @include hover() {
+        &:hover {
+          color: var(--c-title);
+          background-color: var(--c-bg);
+          border-color: var(--c-bg);
+        }
       }
 
       #{$root}.is-hidden & {
@@ -285,8 +293,10 @@ p {
   a:not(.cta) {
     transition: color var(--e-text-content) var(--d-text-content);
 
-    &:hover {
-      color: var(--c-title);
+    @include hover() {
+      &:hover {
+        color: var(--c-title);
+      }
     }
   }
 }
@@ -328,8 +338,10 @@ p {
     margin-top: 0.5em;
     transition: color var(--e-text-content) var(--d-text-content);
 
-    #{$root}:hover & {
-      color: var(--c-text);
+    @include hover() {
+      #{$root}:hover & {
+        color: var(--c-text);
+      }
     }
   }
 
