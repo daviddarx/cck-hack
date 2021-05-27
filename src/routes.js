@@ -9,10 +9,13 @@ import contents from './contents';
 let routes = [
   {
     label: 'Home',
-    path: '/',
+    path: '/home',
     name: 'home',
     component: Home,
     meta: { pageTitle: 'Home' }
+  },
+  {
+    path: '/', redirect: '/home'
   },
   {
     label: 'About',
