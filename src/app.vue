@@ -18,6 +18,7 @@
         <router-view
           :key="$route.fullPath"
           ref="view"
+          v-if="this.isLoaded"
         >
         </router-view>
       </transition>
