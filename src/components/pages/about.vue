@@ -26,11 +26,19 @@
       </div>
 
       <a
-        :href = about.cvdoc
+        :href = about.cvdocde
         target="_blank"
         class="about__link cta"
       >
-        {{about.cvlabel}}
+        {{about.cvlabelde}}
+      </a>
+
+      <a
+        :href = about.cvdocen
+        target="_blank"
+        class="about__link cta"
+      >
+        {{about.cvlabelen}}
       </a>
 
       <h3 class="content__subtitle subline">

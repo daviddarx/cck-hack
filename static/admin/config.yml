@@ -62,12 +62,20 @@ collections:
         name: "image"
         widget: "image"
 
-      - label: "CV Label"
-        name: "cvlabel"
+      - label: "CV Label DE"
+        name: "cvlabelde"
         widget: "string"
 
-      - label: "CV Doc"
-        name: "cvdoc"
+      - label: "CV Doc DE"
+        name: "cvdocde"
+        widget: "file"
+
+        - label: "CV Label EN"
+        name: "cvlabelen"
+        widget: "string"
+
+      - label: "CV Doc DE"
+        name: "cvdocen"
         widget: "file"
 
       - label: "Positions Title"

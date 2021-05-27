@@ -1,6 +1,7 @@
 {
   "contact": "Cédric Knapp \n\nMusterstrasse 23\\\n6000 Winterthur\n\n[talk@justknapp.com](mailto:talk@justknapp.com)\\\n+41 77 425 60 66",
-  "cvlabel": "CV herunterladen",
+  "cvlabelde": "CV herunterladen",
+  "cvlabelen": "Download CV",
   "skills": [
     {
       "skill": "Claims"
@@ -18,7 +19,8 @@
       "skill": "I dont know "
     }
   ],
-  "cvdoc": "/images/uploads/sample.pdf",
+  "cvdocde": "/images/uploads/sample_de.pdf",
+  "cvdocen": "/images/uploads/sample_en.pdf",
   "clients": "HfH (Interkantonale Hochschule für Heilpädagogik) UZH – Univesität Zürich, Universtität, Luzern, ETH Zürich, MAZ, Die Schweizer Journalistenschule, Axa Winterthur Versicherung, Mobiliär Versicherung, ASO Auslandschweizer-OrganisationSwissAid, Antidoping Schweiz, deza.admin.ch, Swisscom, Coop, Interdiscount, Microspot.ch, Mammut Sport, UEFA, St.Morritz, Engadin Mountains, Jungfrau Region, Flughafen Zürich, Olma Messen St.Gallen, Swisslos.ch, MediData, Stadt, Winterthur, EPFL Lausanne, Montreux Jazz Festival, Images Festival Vevey, GastroFribourg, L//P, u.v.m.",
   "positions": [
     {
