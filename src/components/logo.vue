@@ -2,6 +2,7 @@
 <template>
   <div
     class="logo"
+    v-bind:class="{'is-deactived': this.isDeactived}"
   >
     <div class="logo__container">
       <router-link
@@ -24,11 +25,17 @@
   export default Vue.extend({
     data() {
       return {
+        isDeactived: true
       }
     },
     mounted () {
+      this.checkDeactivation();
+      this.$router.afterEach(this.checkDeactivation);
     },
     methods: {
+      checkDeactivation: function () {
+        this.isDeactived = (this.$route.name=='home') ? true : false ;
+      }
     }
   });
 </script>

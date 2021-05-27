@@ -154,6 +154,10 @@ p {
   z-index: 11;
   font-weight: bold;
 
+  &.is-deactived {
+    pointer-events: none;
+  }
+
   a {
     text-decoration: none;
   }
