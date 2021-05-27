@@ -3,31 +3,6 @@
   <div
     class="transition"
   >
-    <div
-      class="transition__words"
-      v-bind:class="{
-        'pos-01': this.wordsPosCurrentID==0,
-        'pos-02': this.wordsPosCurrentID==1,
-        'pos-03': this.wordsPosCurrentID==2,
-      }"
-    >
-      <div
-        class="transition-word transition-word--01"
-      >
-        {{ this.wordsDir[0] }}
-      </div>
-      <div
-        class="transition-word transition-word--02"
-      >
-        {{ this.wordsDir[1] }}
-      </div>
-      <div
-        v-bind:html="this.wordsDir[2]"
-        class="transition-word transition-word--03"
-      >
-        {{ this.wordsDir[2] }}
-      </div>
-    </div>
 
     <transition
       name="transition"
@@ -37,6 +12,31 @@
         class="transition__bg"
         v-if="this.isDisplayingIn"
       >
+        <div
+          class="transition__words"
+          v-bind:class="{
+            'pos-01': this.wordsPosCurrentID==0,
+            'pos-02': this.wordsPosCurrentID==1,
+            'pos-03': this.wordsPosCurrentID==2,
+          }"
+        >
+          <div
+            class="transition-word transition-word--01"
+          >
+            {{ this.wordsDir[0] }}
+          </div>
+          <div
+            class="transition-word transition-word--02"
+          >
+            {{ this.wordsDir[1] }}
+          </div>
+          <div
+            v-bind:html="this.wordsDir[2]"
+            class="transition-word transition-word--03"
+          >
+            {{ this.wordsDir[2] }}
+          </div>
+        </div>
       </div>
     </transition>
   </div>
