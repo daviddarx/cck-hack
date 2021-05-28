@@ -62,7 +62,22 @@ h2 {
 
 b,
 strong {
-  font-weight: bold;
+  --padding-x: -0.5em;
+  --padding-y: calc(var(--padding-x) * 0.5);
+
+  position: relative;
+  font-weight: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--padding-y);
+    bottom: var(--padding-y);
+    left: var(--padding-x);
+    right: var(--padding-x);
+    background-color: var(--c-tag);
+    border-radius: 1em;
+  }
 }
 
 a {
@@ -82,7 +97,7 @@ p {
   --s-padding-modifier-bottom: 0.45;
 
   display: inline-block;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.07em;
   text-decoration: none;
   padding-left: var(--s-padding);
   padding-right: var(--s-padding);
@@ -138,6 +153,7 @@ p {
   @include fontRunText();
 
   font-size: var(--s-text-s);
+  display: inline-block;
   text-transform: uppercase;
   color: var(--c-text);
 }
@@ -177,6 +193,7 @@ p {
     transform-origin: left top;
   }
 }
+
 .img-to-load {
   opacity: 0;
   transition: opacity linear 2s;
@@ -187,7 +204,7 @@ p {
 }
 
 .logo {
-  --s-title: calc(var(--s-text-s) * 2);
+  --s-title: calc(var(--s-text-s) * 2.5);
 
   $el: #{&};
 
@@ -204,6 +221,7 @@ p {
 
   &__title {
     font-size: var(--s-title);
+    letter-spacing: -0.02em;
     transition: color var(--e-text-content) var(--d-text-content);
 
     @include hover() {
@@ -216,8 +234,10 @@ p {
   &__desc {
     @include fontRunText();
 
+    position: relative;
     font-size: var(--s-text-s);
-    margin-top: 0.5em;
+    margin-top: -0.2em;
+    text-align: center;
   }
 }
 
@@ -234,6 +254,9 @@ p {
   width: 100%;
 
   &__logo {
+    position: relative;
+    margin-top: -1.1em;
+
     @include viewport ('mobile-layout') {
       transition: opacity linear 0.2s;
 
@@ -334,7 +357,7 @@ p {
     text-transform: uppercase;
 
     &--secondary {
-      margin-left: calc(var(--s-margin) * 0.3);
+      margin-left: calc(var(--s-margin) * -0.5);
       background-color: var(--c-bg);
       border-color: var(--c-bg);
       transition: color var(--e-text-content) var(--d-text-content), opacity 0.4s linear;
@@ -471,6 +494,18 @@ p {
       }
     }
 
+    @include viewport ('tablet-s') {
+      --dist-y: calc(var(--s-line) * 4);
+    }
+
+    @include viewport ('mobile-l') {
+      --dist-y: calc(var(--s-line) * 3);
+    }
+
+    @include viewport ('mobile') {
+      --dist-y: calc(var(--s-line) * 2);
+    }
+
     #{$root}.is-close & {
       --pos-y: 0;
 
@@ -503,7 +538,7 @@ p {
 }
 
 .content {
-  --s-vertical-spacing: calc(var(--s-gutter) * 2);
+  --s-vertical-spacing: calc(var(--s-gutter) * 3);
 
   position: relative;
   margin-top: 30vh;
@@ -523,7 +558,7 @@ p {
   &__title {
     @include h2();
 
-    margin-top: 0.5em;
+    margin-top: 0.75em;
   }
 
   &__subtitle {
@@ -543,10 +578,11 @@ p {
 
   a:not(.cta) {
     transition: color var(--e-text-content) var(--d-text-content);
+    color: var(--c-title);
 
     @include hover() {
       &:hover {
-        color: var(--c-title);
+        color: var(--c-text);
       }
     }
   }
@@ -570,23 +606,24 @@ p {
 
 .projects {
   &__listing {
-    margin-top: var(--s-vertical-spacing);
+    margin-top: calc(var(--s-vertical-spacing) * 0.75);
   }
 }
 
 .projects-list {
   $root: #{&};
 
-  margin-top: var(--s-vertical-spacing);
+  margin-top: calc(var(--s-vertical-spacing) * 0.5);
 
   &__link {
     text-decoration: none;
+    display: block;
   }
 
   &__title {
     @include h3();
 
-    margin-top: 0.5em;
+    margin-top: 0.8em;
     transition: color var(--e-text-content) var(--d-text-content);
 
     @include hover() {
@@ -598,7 +635,7 @@ p {
 
   &__tags {
     font-size: var(--s-text-s);
-    margin-top: 2em;
+    margin-top: 3em;
   }
 }
 
@@ -610,12 +647,17 @@ p {
   &__year,
   &__agency {
     font-size: var(--s-text-s);
+    line-height: var(--s-lh-h2);
     margin-left: 3em;
   }
 
   &__tags {
     font-size: var(--s-text-s);
-    margin-top: 3em;
+    margin-top: 5em;
+  }
+
+  &__lead {
+    margin-top: 2.2em;
   }
 
   &__images,
@@ -727,7 +769,7 @@ p {
   }
 
   &__position {
-    margin-top: var(--s-vertical-spacing);
+    margin-top: calc(var(--s-vertical-spacing) * 0.5);
 
     &:first-child {
       margin-top: 0;
@@ -747,6 +789,10 @@ p {
   &__language {
     display: flex;
     margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &__language-title {
@@ -767,6 +813,13 @@ p {
       &.active {
         background-color: var(--c-title);
       }
+    }
+  }
+
+  &__clients,
+  &__contact {
+    p:first-of-type {
+      margin-top: 0;
     }
   }
 }
@@ -893,7 +946,7 @@ p {
 
     .pos-02 & {
       --pos-x: 50%;
-      --pos-y: 10%;
+      --pos-y: 15%;
       --s-font-modifier: 0.9;
     }
 

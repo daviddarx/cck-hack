@@ -15,7 +15,7 @@
 @mixin fontRunText() {
   font-family: LazareGrotesk-Light, Arial, Helvetica, sans-serif;
   font-weight: normal;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
 }
@@ -23,6 +23,7 @@
 @mixin fontTitle() {
   font-family: IonicNo5-Medium, serif;
   font-weight: normal;
+  letter-spacing: 0;
   color: var(--c-title);
 }
 
@@ -100,11 +101,11 @@ $breakpoints: (
   --c-tag: rgba(0, 0, 0, 0.1);
 
   //sizes
-  --s-text: 2rem;
+  --s-text: 2.3rem;
   --s-text-s: calc(var(--s-text) * 0.5);
   --s-lh: 1.5;
-  --s-h2: calc(var(--s-text) * 2);
-  --s-lh-h2: 1.25;
+  --s-h2: calc(var(--s-text) * 2.4);
+  --s-lh-h2: 1.1;
   --s-h3: calc(var(--s-text) * 1.5);
   --s-lh-h3: 1.25;
   --s-gutter: 6vw;
