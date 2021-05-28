@@ -75,12 +75,13 @@ p {
 }
 
 @mixin tag() {
+  @include fontRunText();
+
   --s-padding: 1.4em;
   --s-padding-modifier-top: 0.5;
   --s-padding-modifier-bottom: 0.45;
 
   display: inline-block;
-  font-weight: bold;
   letter-spacing: 0.025em;
   text-decoration: none;
   padding-left: var(--s-padding);
@@ -134,9 +135,10 @@ p {
 }
 
 .subline {
+  @include fontRunText();
+
   font-size: var(--s-text-s);
   text-transform: uppercase;
-  font-weight: bold;
   color: var(--c-text);
 }
 
@@ -177,6 +179,8 @@ p {
   }
 
   &__desc {
+    @include fontRunText();
+
     font-size: var(--s-text-s);
     margin-top: 0.5em;
   }
@@ -626,9 +630,10 @@ p {
   }
 
   &__title {
+    @include fontTitle();
+
     display: block;
     margin-top: 1em;
-    font-weight: bold;
     color: var(--c-title);
   }
 }
