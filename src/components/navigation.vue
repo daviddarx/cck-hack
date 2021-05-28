@@ -23,7 +23,7 @@
           to="/about"
         >About</router-link><!--
         --><router-link
-          class="navigation__link"
+          class="navigation__link navigation__home"
           to="/home"
         >Home</router-link>
       </div>

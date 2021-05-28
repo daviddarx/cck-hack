@@ -380,6 +380,14 @@ p {
       margin-top: calc(var(--s-gutter) * 2);
     }
   }
+
+  &__home {
+    display: none;
+
+    @include viewport ('mobile-layout') {
+      display: block;
+    }
+  }
 }
 
 .burger {
