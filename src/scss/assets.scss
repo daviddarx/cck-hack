@@ -6,26 +6,26 @@
 }
 
 @font-face {
-  font-family: "TTFN-Light";
-  src: url('../fonts/TTFN-Light.woff2') format('woff2'), url('../fonts/TTFN-Light.woff') format('woff');
+  font-family: "SpaceMono-Regular";
+  src: url('../fonts/SpaceMono-Regular.woff2') format('woff2'), url('../fonts/SpaceMono-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: "TTFN-DemiBold";
-  src: url('../fonts/TTFN-DemiBold.woff2') format('woff2'), url('../fonts/TTFN-DemiBold.woff') format('woff');
+  font-family: "SpaceMono-Bold";
+  src: url('../fonts/SpaceMono-Bold.woff2') format('woff2'), url('../fonts/SpaceMono-Bold.woff') format('woff');
 }
 
 //fonts
 @mixin fontRunText() {
-  font-family: TTFN-Light, Arial, Helvetica, sans-serif;
+  font-family: SpaceMono-Regular, Arial, Helvetica, sans-serif;
   font-weight: normal;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin fontRunTextBold() {
-  font-family: TTFN-DemiBold, Arial, Helvetica, sans-serif;
+  font-family: SpaceMono-Bold, Arial, Helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: 0.06em;
   // -webkit-font-smoothing: antialiased;
