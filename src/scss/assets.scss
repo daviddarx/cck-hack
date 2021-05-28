@@ -1,5 +1,4 @@
 @import url("https://hello.myfonts.net/count/3e7c21");
-@import url("https://hello.myfonts.net/count/3e7c28");
 
 @font-face {
   font-family: "IonicNo5-Medium";
@@ -7,13 +6,26 @@
 }
 
 @font-face {
-  font-family: "LazareGrotesk-Light";
-  src: url('../fonts/lazare_grotesk_light.woff2') format('woff2'), url('../fonts/lazare_grotesk_light.woff') format('woff');
+  font-family: "TTFN-Light";
+  src: url('../fonts/TTFN-Light.woff2') format('woff2'), url('../fonts/TTFN-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: "TTFN-DemiBold";
+  src: url('../fonts/TTFN-DemiBold.woff2') format('woff2'), url('../fonts/TTFN-DemiBold.woff') format('woff');
 }
 
 //fonts
 @mixin fontRunText() {
-  font-family: LazareGrotesk-Light, Arial, Helvetica, sans-serif;
+  font-family: TTFN-Light, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin fontRunTextBold() {
+  font-family: TTFN-DemiBold, Arial, Helvetica, sans-serif;
   font-weight: normal;
   letter-spacing: 0.06em;
   // -webkit-font-smoothing: antialiased;

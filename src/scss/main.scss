@@ -90,7 +90,7 @@ p {
 }
 
 @mixin tag() {
-  @include fontRunText();
+  @include fontRunTextBold();
 
   --s-padding: 1.4em;
   --s-padding-modifier-top: 0.5;
@@ -150,7 +150,7 @@ p {
 }
 
 .subline {
-  @include fontRunText();
+  @include fontRunTextBold();
 
   font-size: var(--s-text-s);
   display: inline-block;
