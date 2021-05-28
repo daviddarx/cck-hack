@@ -1,13 +1,22 @@
 @import url("https://hello.myfonts.net/count/3e7c21");
+@import url("https://hello.myfonts.net/count/3e7c28");
 
 @font-face {
   font-family: "IonicNo5-Medium";
   src: url('../fonts/ionic5_medium.woff2') format('woff2'), url('../fonts/ionic5_medium.woff') format('woff');
 }
 
+@font-face {
+  font-family: "LazareGrotesk-Light";
+  src: url('../fonts/lazare_grotesk_light.woff2') format('woff2'), url('../fonts/lazare_grotesk_light.woff') format('woff');
+}
+
 //fonts
 @mixin fontRunText() {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: LazareGrotesk-Light, Arial, Helvetica, sans-serif;
+  letter-spacing: 0.04em;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin fontTitle() {
