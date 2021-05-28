@@ -762,6 +762,7 @@ p {
 
 .transition-word {
   @include fontTitle();
+
   --pos-x: 50%;
   --pos-y: 50%;
   --s-font: 15vw;
