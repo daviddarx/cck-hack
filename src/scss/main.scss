@@ -761,6 +761,7 @@ p {
 }
 
 .transition-word {
+  @include fontTitle();
   --pos-x: 50%;
   --pos-y: 50%;
   --s-font: 15vw;
@@ -770,7 +771,6 @@ p {
   --duration: 0s;
   --delay: 0s;
 
-  font-weight: bold;
   font-size: calc(var(--s-font) * var(--s-font-modifier));
   position: absolute;
   top: var(--pos-y);
