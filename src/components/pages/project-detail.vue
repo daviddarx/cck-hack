@@ -6,7 +6,6 @@
   >
     <div class="content__centered">
 
-
       <h2 class="project__subline subline"> {{content.subline}} </h2>
 
       <span class="project__year">
