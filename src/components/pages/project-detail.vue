@@ -6,7 +6,6 @@
   >
     <div class="content__centered">
 
-
       <h2 class="project__subline subline"> {{content.subline}} </h2>
 
       <span class="project__year">
@@ -109,27 +108,32 @@
     <div class="project__pagination pagination">
       <router-link
         v-bind:to="this.linkPrev.path"
-        class="pagination__link-prev"
+        class="pagination-link pagination-link--prev"
       >
-        <span class="pagination__subline subline">
+        <span class="pagination-link__subline subline">
           Prev
         </span>
 
-        <span class="pagination__title">
+        <span class="pagination-link__title">
           {{this.linkPrev.title}}
         </span>
+
+        <div class="pagination-link__arrow arrow"></div>
       </router-link>
+
       <router-link
         v-bind:to="this.linkNext.path"
-        class="pagination__link-next"
+        class="pagination-link pagination-link--next"
       >
-        <span class="pagination__subline subline">
+        <span class="pagination-link__subline subline">
           Next
         </span>
 
-        <span class="pagination__title">
+        <span class="pagination-link__title">
           {{this.linkNext.title}}
         </span>
+
+        <div class="pagination-link__arrow pagination-link__arrow--next arrow"></div>
       </router-link>
     </div>
 

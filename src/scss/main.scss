@@ -62,7 +62,22 @@ h2 {
 
 b,
 strong {
-  font-weight: bold;
+  --padding-x: -0.5em;
+  --padding-y: calc(var(--padding-x) * 0.5);
+
+  position: relative;
+  font-weight: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--padding-y);
+    bottom: var(--padding-y);
+    left: var(--padding-x);
+    right: var(--padding-x);
+    background-color: var(--c-tag);
+    border-radius: 1em;
+  }
 }
 
 a {
@@ -75,13 +90,14 @@ p {
 }
 
 @mixin tag() {
+  @include fontRunText();
+
   --s-padding: 1.4em;
   --s-padding-modifier-top: 0.5;
   --s-padding-modifier-bottom: 0.45;
 
   display: inline-block;
-  font-weight: bold;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.07em;
   text-decoration: none;
   padding-left: var(--s-padding);
   padding-right: var(--s-padding);
@@ -134,10 +150,48 @@ p {
 }
 
 .subline {
+  @include fontRunText();
+
   font-size: var(--s-text-s);
+  display: inline-block;
   text-transform: uppercase;
-  font-weight: bold;
   color: var(--c-text);
+}
+
+.arrow {
+  --s-width: 3em;
+  --s-height: 0.75em;
+  --c: var(--c-text);
+  --d: 0.4s;
+  --e: var(--e-inout);
+
+  position: relative;
+  background: var(--c);
+  height: var(--s-line);
+  width: var(--s-width);
+  transition: width var(--e) var(--d);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: var(--s-line);
+    width: var(--s-height);
+    background: var(--c);
+    transition: width var(--e) var(--d);
+    transition-delay: 0.3s;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+    transform-origin: left top;
+  }
 }
 
 .img-to-load {
@@ -150,7 +204,7 @@ p {
 }
 
 .logo {
-  --s-title: calc(var(--s-text-s) * 2);
+  --s-title: calc(var(--s-text-s) * 2.5);
 
   $el: #{&};
 
@@ -167,6 +221,7 @@ p {
 
   &__title {
     font-size: var(--s-title);
+    letter-spacing: -0.02em;
     transition: color var(--e-text-content) var(--d-text-content);
 
     @include hover() {
@@ -177,8 +232,12 @@ p {
   }
 
   &__desc {
+    @include fontRunText();
+
+    position: relative;
     font-size: var(--s-text-s);
-    margin-top: 0.5em;
+    margin-top: -0.2em;
+    text-align: center;
   }
 }
 
@@ -195,6 +254,9 @@ p {
   width: 100%;
 
   &__logo {
+    position: relative;
+    margin-top: -1.1em;
+
     @include viewport ('mobile-layout') {
       transition: opacity linear 0.2s;
 
@@ -295,7 +357,7 @@ p {
     text-transform: uppercase;
 
     &--secondary {
-      margin-left: calc(var(--s-margin) * 0.3);
+      margin-left: calc(var(--s-margin) * -0.5);
       background-color: var(--c-bg);
       border-color: var(--c-bg);
       transition: color var(--e-text-content) var(--d-text-content), opacity 0.4s linear;
@@ -376,6 +438,14 @@ p {
       margin-top: calc(var(--s-gutter) * 2);
     }
   }
+
+  &__home {
+    display: none;
+
+    @include viewport ('mobile-layout') {
+      display: block;
+    }
+  }
 }
 
 .burger {
@@ -424,6 +494,18 @@ p {
       }
     }
 
+    @include viewport ('tablet-s') {
+      --dist-y: calc(var(--s-line) * 4);
+    }
+
+    @include viewport ('mobile-l') {
+      --dist-y: calc(var(--s-line) * 3);
+    }
+
+    @include viewport ('mobile') {
+      --dist-y: calc(var(--s-line) * 2);
+    }
+
     #{$root}.is-close & {
       --pos-y: 0;
 
@@ -456,7 +538,7 @@ p {
 }
 
 .content {
-  --s-vertical-spacing: calc(var(--s-gutter) * 2);
+  --s-vertical-spacing: calc(var(--s-gutter) * 3);
 
   position: relative;
   margin-top: 30vh;
@@ -476,7 +558,7 @@ p {
   &__title {
     @include h2();
 
-    margin-top: 0.5em;
+    margin-top: 0.75em;
   }
 
   &__subtitle {
@@ -496,10 +578,11 @@ p {
 
   a:not(.cta) {
     transition: color var(--e-text-content) var(--d-text-content);
+    color: var(--c-title);
 
     @include hover() {
       &:hover {
-        color: var(--c-title);
+        color: var(--c-text);
       }
     }
   }
@@ -523,23 +606,24 @@ p {
 
 .projects {
   &__listing {
-    margin-top: var(--s-vertical-spacing);
+    margin-top: calc(var(--s-vertical-spacing) * 0.75);
   }
 }
 
 .projects-list {
   $root: #{&};
 
-  margin-top: var(--s-vertical-spacing);
+  margin-top: calc(var(--s-vertical-spacing) * 0.5);
 
   &__link {
     text-decoration: none;
+    display: block;
   }
 
   &__title {
     @include h3();
 
-    margin-top: 0.5em;
+    margin-top: 0.8em;
     transition: color var(--e-text-content) var(--d-text-content);
 
     @include hover() {
@@ -551,7 +635,7 @@ p {
 
   &__tags {
     font-size: var(--s-text-s);
-    margin-top: 2em;
+    margin-top: 3em;
   }
 }
 
@@ -563,12 +647,17 @@ p {
   &__year,
   &__agency {
     font-size: var(--s-text-s);
+    line-height: var(--s-lh-h2);
     margin-left: 3em;
   }
 
   &__tags {
     font-size: var(--s-text-s);
-    margin-top: 3em;
+    margin-top: 5em;
+  }
+
+  &__lead {
+    margin-top: 2.2em;
   }
 
   &__images,
@@ -607,29 +696,64 @@ p {
 
 .pagination {
   display: flex;
+}
 
-  &__link-prev,
-  &__link-next {
-    --s-padding: var(--s-gutter);
+.pagination-link {
+  $root: #{&};
 
-    box-sizing: border-box;
-    text-align: center;
-    text-decoration: none;
-  }
+  --s-padding: calc(var(--s-gutter) * 0.5);
 
-  &__link-prev {
-    padding-right: var(--s-padding);
-  }
-
-  &__link-next {
-    padding-left: var(--s-padding);
-  }
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  padding-left: var(--s-padding);
+  padding-right: var(--s-padding);
 
   &__title {
+    @include h3();
+
     display: block;
     margin-top: 1em;
-    font-weight: bold;
     color: var(--c-title);
+    transition: color var(--e-text-content) var(--d-text-content);
+
+    #{$root}:hover & {
+      color: var(--c-text);
+    }
+  }
+
+  &__arrow {
+    --s-width: 2em;
+    --s-height: 0.5em;
+    --c: var(--c-text);
+    --t: translate(-50%, 0);
+
+    position: relative;
+    margin-top: 1.75em;
+    margin-bottom: 1.5em;
+    left: 50%;
+    transform: var(--t);
+
+    @include hover() {
+      --s-width: 1em;
+      --s-height: 0;
+      --c: var(--c-title);
+
+      // position: absolute;
+      // margin-top: 0;
+      // margin-bottom: 0;
+    }
+
+    &--next {
+      transform: var(--t) scaleX(-1);
+    }
+
+    @include hover() {
+      #{$root}:hover & {
+        --s-width: 2.8em;
+        --s-height: 0.65em;
+      }
+    }
   }
 }
 
@@ -645,7 +769,7 @@ p {
   }
 
   &__position {
-    margin-top: var(--s-vertical-spacing);
+    margin-top: calc(var(--s-vertical-spacing) * 0.5);
 
     &:first-child {
       margin-top: 0;
@@ -665,6 +789,10 @@ p {
   &__language {
     display: flex;
     margin-top: 1em;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &__language-title {
@@ -685,6 +813,13 @@ p {
       &.active {
         background-color: var(--c-title);
       }
+    }
+  }
+
+  &__clients,
+  &__contact {
+    p:first-of-type {
+      margin-top: 0;
     }
   }
 }
@@ -761,6 +896,8 @@ p {
 }
 
 .transition-word {
+  @include fontTitle();
+
   --pos-x: 50%;
   --pos-y: 50%;
   --s-font: 15vw;
@@ -770,7 +907,6 @@ p {
   --duration: 0s;
   --delay: 0s;
 
-  font-weight: bold;
   font-size: calc(var(--s-font) * var(--s-font-modifier));
   position: absolute;
   top: var(--pos-y);
@@ -810,7 +946,7 @@ p {
 
     .pos-02 & {
       --pos-x: 50%;
-      --pos-y: 10%;
+      --pos-y: 15%;
       --s-font-modifier: 0.9;
     }
 
