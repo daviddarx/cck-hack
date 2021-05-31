@@ -1,7 +1,6 @@
 {
   "contact": "Cédric Knapp \n\nMusterstrasse 23\\\n6000 Winterthur\n\n[talk@justknapp.com](mailto:talk@justknapp.com)\\\n+41 77 425 60 66",
-  "cvlabelde": "CV herunterladen",
-  "cvlabelen": "Download CV",
+  "cvlabel": "CV herunterladen",
   "skills": [
     {
       "skill": "Claims"
@@ -19,8 +18,9 @@
       "skill": "I dont know "
     }
   ],
+  "cvlabelde": "CV herunterladen",
+  "cvdoc": "/images/uploads/21_cv_ck.pdf",
   "cvdocde": "/images/uploads/sample_de.pdf",
-  "cvdocen": "/images/uploads/sample_en.pdf",
   "clients": "HfH (Interkantonale Hochschule für Heilpädagogik) UZH – Univesität Zürich, Universtität, Luzern, ETH Zürich, MAZ, Die Schweizer Journalistenschule, Axa Winterthur Versicherung, Mobiliär Versicherung, ASO Auslandschweizer-OrganisationSwissAid, Antidoping Schweiz, deza.admin.ch, Swisscom, Coop, Interdiscount, Microspot.ch, Mammut Sport, UEFA, St.Morritz, Engadin Mountains, Jungfrau Region, Flughafen Zürich, Olma Messen St.Gallen, Swisslos.ch, MediData, Stadt, Winterthur, EPFL Lausanne, Montreux Jazz Festival, Images Festival Vevey, GastroFribourg, L//P, u.v.m.",
   "positions": [
     {
@@ -30,16 +30,18 @@
     },
     {
       "dates": "2015 – 2018",
-      "agency": "20 Minutes ",
+      "agency": "20 Minuten / Tamedia ",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n\nQuisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris."
     },
     {
-      "dates": "2012 – 2015",
-      "agency": "Mustercompanie",
+      "dates": "2011 – 2015",
+      "agency": "Diverse Nebenjobs",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. Donec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. \n\nProin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lorem ante, imperdiet ac semper vitae, porta sit amet justo. \n\nDonec et lacinia odio. Ut at hendrerit mauris. Vestibulum ac semper massa. Proin eu mollis nisl. Nam eros ante, porta vel porttitor eu, viverra in diam. Integer congue, ipsum quis imperdiet posuere, est purus vestibulum nulla, non tempor turpis dolor vel mauris."
     }
   ],
+  "cvlabelen": "Download CV",
   "positionstitle": "Experience",
+  "cvdocen": "/images/uploads/sample_en.pdf",
   "clientstitle": "Clients",
   "subline": "About",
   "skillstitle": "Skills",
@@ -57,6 +59,14 @@
     {
       "level": 3,
       "language": "Französisch "
+    },
+    {
+      "level": 2,
+      "language": "Italienisch"
+    },
+    {
+      "level": 1,
+      "language": "Spanisch"
     }
   ],
   "image": "/images/uploads/cedric-knapp.jpg",
