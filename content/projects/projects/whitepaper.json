@@ -4,6 +4,12 @@
   "subline": "Eyekon, Intelliact",
   "title": "Ein Whitepaper muss her!",
   "tags": "Konzept, Storytelling, Copy",
+  "links": [
+    {
+      "linkurl": "https://www.eyekon.ch/blog/case-study-smart-sales-in-b2b",
+      "linklabel": "Zum Whitepaper (Download funktioniert auch ohne Angaben)"
+    }
+  ],
   "credits": "David Darx, Dominik Junker, Marco Lüthi – Design",
   "uuid": "whitepaper",
   "lead": "Du kannst noch so innovativ sein, solange du kein Whitepaper publiziert hast, glaubt's dir keiner – gerade im Tech-Bereich. Dieses Schlamassel haben wir der Start-Up Szene im Silicon Valley zu verdanken und dürfen es nun ausbaden. Für das Konzept «Smart Sales»: Die Übertragung des Verkaufsprozesses im B2B auf eine durchgängige digitale Customer Journey.",
