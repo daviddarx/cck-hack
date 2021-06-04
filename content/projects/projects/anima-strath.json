@@ -13,10 +13,14 @@
     {
       "linklabel": "Zur Website",
       "linkurl": "https://www.anima-strath.ch/de"
+    },
+    {
+      "linklabel": "Zur ausführlichen Projektdoku",
+      "linkurl": "https://www.eyekon.ch/projekte/anima-strath"
     }
   ],
   "credits": "David Darx – Design",
   "uuid": "anima-strath",
-  "lead": "Die natürliche Nahrungsergänzung Bio-Strath gibt's auch für Tiere, heisst dann einfach Anima-Strath. Um erstmals in den Direct-to-Consumer-Markt einzusteigen, haben wir bei Eyekon eine Website mit Shop erstellt. Ich war zuständig fürs Branding, die Content-Struktur, Inhaltsarchitektur und die Texte. Zielgruppenspezifische, lockere Kommunikation: Eine Newsletter-Anmeldung, die direkt von Tieren angepriesen wird.",
+  "lead": "Anima-Strath, die natürliche Nahrungsergänzung für Tiere, ist seit 2019 online erhältlich über eine Website aus dem Hause Eyekon. Ich war zuständig für Branding, Content-Struktur, Inhaltsarchitektur und Texte und hatte dabei die Gelegenheit, mit der zielgruppenspezifischen Kommunikation zu spielen. Beispiel: Eine Newsletter-Anmeldung, die direkt von Tieren angepriesen wird.",
   "year": "2019"
 }
