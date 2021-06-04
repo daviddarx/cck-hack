@@ -3,6 +3,14 @@
   "date": "2020-02-03T23:00:00.000Z",
   "subline": "Anima-Strath",
   "title": "Mit Hunden und Katzen sprechen",
+  "images": [
+    {
+      "image": "/images/uploads/anima_strath_case_02.jpg"
+    },
+    {
+      "image": "/images/uploads/bildschirmfoto-2021-06-05-um-00.02.43.png"
+    }
+  ],
   "tags": "Content-Konzept, Inhaltsarchitektur, Branding, Copy, UX-Writing",
   "credits": "David Darx – Design",
   "uuid": "anima-strath",
