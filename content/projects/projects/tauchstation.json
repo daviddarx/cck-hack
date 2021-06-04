@@ -8,6 +8,10 @@
     {
       "linkurl": "https://www.instagram.com/tauch.station/?hl=de",
       "linklabel": "Zum Instagram-Profil"
+    },
+    {
+      "linklabel": "Zur Website",
+      "linkurl": "https://www.tauch-station.ch/"
     }
   ],
   "credits": ".",
