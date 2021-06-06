@@ -15,6 +15,16 @@
     }
   ],
   "tags": "Projektmanagement, Branding, Positionierung, Marketing, PR, Copy, Content-Konzept",
+  "links": [
+    {
+      "linklabel": "Zur Website",
+      "linkurl": "https://www.medidata.ch/md/web/de/"
+    },
+    {
+      "linklabel": "Zur ausführliche Projekt-Doku",
+      "linkurl": "https://www.eyekon.ch/projekte/rebranding-medidata"
+    }
+  ],
   "credits": "David Darx & Giacomo Pedemonte – Design",
   "uuid": "medidata",
   "lead": "Mein Baby. Mein erster Account. Für MediData habe ich so ziemlich alles gemacht – von der durchgängigen Kommunikationsstrategie, zum Employer Branding, digitale und analoge Kampagnen, Releaseplanung, Koordination Frontend und Backend – you name it.",
