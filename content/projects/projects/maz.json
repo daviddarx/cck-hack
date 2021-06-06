@@ -3,9 +3,27 @@
   "date": "2021-06-01T16:03:23.911Z",
   "subline": "MAZ",
   "title": "Infos schneller finden = mehr Conversions",
-  "tags": "Projektmanagement, Content-Modell, Inhaltsarchitektur, Branding",
+  "images": [
+    {
+      "image": "/images/uploads/bildschirmfoto-2021-06-06-um-16.16.15.png"
+    },
+    {
+      "image": "/images/uploads/bildschirmfoto-2021-06-06-um-16.19.25.png"
+    }
+  ],
+  "tags": "Projektmanagement, Content-Konzept, Content-Modell, Inhaltsarchitektur, Branding",
+  "links": [
+    {
+      "linklabel": "Zur Website",
+      "linkurl": "https://www.maz.ch/home"
+    },
+    {
+      "linkurl": "https://www.eyekon.ch/projekte/maz",
+      "linklabel": "Zur ausführlichen Projekt-Doku"
+    }
+  ],
   "credits": "David Darx – Design",
   "uuid": "maz",
-  "lead": "Lorem Ipsum",
+  "lead": "Das MAZ ist Aus- und Weiterbildungsstätte für Journis und Kommunikationsfachleute. Was nach zwei Zielgruppen klingt, teilt sich im Detail auf über 50 – und für einen Web-Relaunch sollten alle intuitiven Zugang zu passenden Kursen erlangen. Möglich machten es es ein Clustering der verschiednen Usertypen und entsprechende Landingpages, Themeneinstiege, nutzerzentrierte Navigationen und Filter.",
   "year": "2019"
 }
