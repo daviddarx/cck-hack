@@ -3,9 +3,20 @@
   "date": "2021-06-01T16:11:27.527Z",
   "subline": "MediData",
   "title": "Durchgängige Kommunikation über alle Kanäle",
+  "images": [
+    {
+      "image": "/images/uploads/md_inserat.png"
+    },
+    {
+      "image": "/images/uploads/menükarteifas.png"
+    },
+    {
+      "image": "/images/uploads/releaseplanung.png"
+    }
+  ],
   "tags": "Projektmanagement, Branding, Positionierung, Marketing, PR, Copy, Content-Konzept",
   "credits": "David Darx & Giacomo Pedemonte – Design",
   "uuid": "medidata",
-  "lead": "Mein erster Account. Employer Branding, Koordination Frontend und Backend, Kampagnen – you name it.",
+  "lead": "Mein Baby. Mein erster Account. Für MediData habe ich so ziemlich alles gemacht – von der durchgängigen Kommunikationsstrategie, zum Employer Branding, digitale und analoge Kampagnen, Releaseplanung, Koordination Frontend und Backend – you name it.",
   "year": "2018-2021"
 }
