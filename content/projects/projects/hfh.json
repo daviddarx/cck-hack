@@ -3,7 +3,25 @@
   "date": "2020-06-09T22:00:00.000Z",
   "subline": "HfH",
   "title": "Wie entwirrt man einen Hochschul-Kosmos?",
+  "images": [
+    {
+      "image": "/images/uploads/meta_intro.jpg"
+    },
+    {
+      "image": "/images/uploads/story.jpg"
+    }
+  ],
   "tags": "Content-Konzept, Inhaltsarchitektur, Branding",
+  "links": [
+    {
+      "linklabel": "Zur Webiste",
+      "linkurl": "https://www.hfh.ch"
+    },
+    {
+      "linklabel": "Zur ausführlichen Projekt-Doku",
+      "linkurl": "https://www.eyekon.ch/projekte/hfh"
+    }
+  ],
   "credits": "David Darx – Design",
   "uuid": "hfh",
   "lead": "Gerade bei inhaltsgetriebenen Plattformen steht und fällt eine gute Usability bereits in der Konzept-Phase. Bei der Hochschule für Heilpädagogik HFH (Content en masse, 6 Navigationsebenen) lohnte es sich deshalb, in diesen Bereich zu investieren. So konnte aufgezeigt werden, wie Content durch Metainformationen modularisier- und aggregierbar wird, eine mehrstufige Navigation für Desktop und Mobile funktionieren kann, u.v.m...",
