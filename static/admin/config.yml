@@ -229,6 +229,23 @@ collections:
             name: "image"
             widget: "image"
 
+      - label: "Images – 2 Columns"
+        name: "images2cols"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Image Duo"
+            name: "imageduo"
+            widget: "object"
+            required: false
+            fields:
+              - label: "Image Left"
+                name: "imageleft"
+                widget: "image"
+              - label: "Image Right"
+                name: "imageright"
+                widget: "image"
+
       - label: "Videos"
         name: "videos"
         widget: "list"
