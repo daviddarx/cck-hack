@@ -1,5 +1,13 @@
 {
   "agency": "Freischaffend",
+  "images2cols": [
+    {
+      "imageduo": {
+        "imageleft": "/images/uploads/bildschirmfoto-2021-06-04-um-20.46.12.png",
+        "imageright": "/images/uploads/bildschirmfoto-2021-06-04-um-20.49.43.png"
+      }
+    }
+  ],
   "date": "2021-06-01T16:30:48.310Z",
   "subline": "Tauchstation",
   "title": "Ein bisschen mehr Tiefe für Instagram",
