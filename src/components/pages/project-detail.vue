@@ -36,7 +36,7 @@
       </div>
 
       <div
-        v-if="content.images"
+        v-if="content.images && content.images.length"
         class="project__images"
       >
         <div
@@ -55,7 +55,32 @@
       </div>
 
       <div
-        v-if="content.videos"
+        v-if="content.imagesduos && content.imagesduos.length"
+        class="project__images-duos"
+      >
+        <div
+          v-for="(duo, i) in content.imagesduos"
+          :key="duo.imageleft+i"
+          ref="imageduo"
+          class="images-duo"
+        >
+          <img
+            :src = duo.imageduo.imageleft
+            :alt = content.title
+            class = "img-to-load images-duo__img images-duo__img--left"
+            @load="imgLoaded"
+          >
+          <img
+            :src = duo.imageduo.imageright
+            :alt = content.title
+            class = "img-to-load images-duo__img images-duo__img--right"
+            @load="imgLoaded"
+          >
+        </div>
+      </div>
+
+      <div
+        v-if="content.videos && content.videos.length"
         class="project__videos"
       >
         <div
@@ -75,14 +100,14 @@
       </div>
 
       <h3
-        v-if="content.links"
+        v-if="content.links && content.links.length"
         class="content__subtitle subline"
       >
         Links
       </h3>
 
       <div
-        v-if="content.links"
+        v-if="content.links && content.links.length"
         class="project__links"
       >
         <a

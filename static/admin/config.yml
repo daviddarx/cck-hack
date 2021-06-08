@@ -230,7 +230,7 @@ collections:
             widget: "image"
 
       - label: "Images – 2 Columns"
-        name: "images2cols"
+        name: "imagesduos"
         widget: "list"
         required: false
         fields:

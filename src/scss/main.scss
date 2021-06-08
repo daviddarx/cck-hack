@@ -641,6 +641,7 @@ p {
   }
 
   &__images,
+  &__images-duos,
   &__videos {
     margin-top: var(--s-vertical-spacing);
   }
@@ -671,6 +672,15 @@ p {
 
   &__pagination {
     margin-top: var(--s-vertical-spacing);
+  }
+}
+
+.images-duo {
+  display: flex;
+  justify-content: space-between;
+
+  &__img {
+    width: calc(50% - var(--s-gutter) * 0.2);
   }
 }
 
