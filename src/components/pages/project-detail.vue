@@ -74,7 +74,10 @@
         </div>
       </div>
 
-      <h3 class="content__subtitle subline">
+      <h3
+        v-if="content.links"
+        class="content__subtitle subline"
+      >
         Links
       </h3>
 
@@ -93,7 +96,10 @@
         </a>
       </div>
 
-      <h3 class="content__subtitle subline">
+      <h3
+        v-if="content.credits"
+        class="content__subtitle subline"
+      >
         Credits
       </h3>
 
