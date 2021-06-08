@@ -60,26 +60,6 @@ h2 {
   @include h2();
 }
 
-b,
-strong {
-  --padding-x: -0.5em;
-  --padding-y: calc(var(--padding-x) * 0.5);
-
-  position: relative;
-  font-weight: normal;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: var(--padding-y);
-    bottom: var(--padding-y);
-    left: var(--padding-x);
-    right: var(--padding-x);
-    background-color: var(--c-tag);
-    border-radius: 1em;
-  }
-}
-
 a {
   color: var(--c-text);
   text-decoration: underline;
