@@ -543,6 +543,12 @@ p {
   &--centered {
     padding: 0 var(--s-padding-column) 0 var(--s-padding-column);
   }
+
+  &--wide {
+    @include viewport ('desktop-xl') {
+      padding: 0 var(--s-padding-column) 0 var(--s-padding-column);
+    }
+  }
 }
 
 .content {
@@ -685,7 +691,9 @@ p {
 
   &__image-el {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__video-el {
