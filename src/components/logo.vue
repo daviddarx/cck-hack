@@ -9,10 +9,11 @@
         to="/"
       >
         <h1 class="logo__title">
-          Cédric Knapp
+          <span class="logo__last-name">Cédric</span>
+          <span class="logo__name">Knapp</span>
         </h1>
         <p class="logo__desc">
-          content that matters.
+          content<br>that matters.
         </p>
       </router-link>
     </div>
