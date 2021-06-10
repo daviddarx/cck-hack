@@ -13,12 +13,14 @@
       </div>
     </div>
 
-    <img
-      :src = about.image
-      @load="imgLoaded"
-      alt="Cédric Knapp"
-      class="img-to-load about__img"
-    >
+    <div class="column column--centered">
+      <img
+        :src = about.image
+        @load="imgLoaded"
+        alt="Cédric Knapp"
+        class="img-to-load about__img"
+      >
+    </div>
 
     <div class="column column--centered">
       <div
