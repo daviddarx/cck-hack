@@ -111,6 +111,7 @@ $breakpoints: (
   --s-gutter: 6vw;
   --s-p-margin-top: 2em;
   --s-line: 2px;
+  --s-padding-column: calc(var(--s-gutter) * 2);
 
   //duration
   --d-text-content: 0.25s;
@@ -123,5 +124,6 @@ $breakpoints: (
 
   @include viewport ('mobile-layout') {
     --s-text: 4rem;
+    --s-padding-column: 0;
   }
 }
