@@ -53,50 +53,48 @@
           @load="imgLoaded"
         >
       </div>
+    </div>
 
+    <div
+      v-if="content.imagesduos && content.imagesduos.length"
+      class="project__images-duos"
+    >
       <div
-        v-if="content.imagesduos && content.imagesduos.length"
-        class="project__images-duos"
+        v-for="(duo, i) in content.imagesduos"
+        :key="duo.imageleft+i"
+        ref="imageduo"
+        class="images-duo"
       >
-        <div
-          v-for="(duo, i) in content.imagesduos"
-          :key="duo.imageleft+i"
-          ref="imageduo"
-          class="images-duo"
+        <img
+          :src = duo.imageduo.imageleft
+          :alt = content.title
+          class = "img-to-load images-duo__img images-duo__img--left"
+          @load="imgLoaded"
         >
-          <img
-            :src = duo.imageduo.imageleft
-            :alt = content.title
-            class = "img-to-load images-duo__img images-duo__img--left"
-            @load="imgLoaded"
-          >
-          <img
-            :src = duo.imageduo.imageright
-            :alt = content.title
-            class = "img-to-load images-duo__img images-duo__img--right"
-            @load="imgLoaded"
-          >
-        </div>
+        <img
+          :src = duo.imageduo.imageright
+          :alt = content.title
+          class = "img-to-load images-duo__img images-duo__img--right"
+          @load="imgLoaded"
+        >
       </div>
+    </div>
 
+    <div
+      class="project__videos"
+    >
       <div
-        v-if="content.videos && content.videos.length"
-        class="project__videos"
+        v-for="(vid, i) in content.videos"
+        :key="vid.vimeoid+i"
+        class="project__video"
       >
-        <div
-          v-for="(vid, i) in content.videos"
-          :key="vid.vimeoid+i"
-          class="project__video"
+        <vimeo-player
+          ref="player"
+          :video-id="vid.vimeoid"
+          :options="{'responsive':true}"
+          class="project__video-el"
         >
-          <vimeo-player
-            ref="player"
-            :video-id="vid.vimeoid"
-            :options="{'responsive':true}"
-            class="project__video-el"
-
-          >
-          </vimeo-player>
-        </div>
+        </vimeo-player>
       </div>
     </div>
 
@@ -227,6 +225,7 @@
     },
     mounted () {
       setTimeout(this.display, 100);
+      console.log(this.content);
     },
 
     methods: {
