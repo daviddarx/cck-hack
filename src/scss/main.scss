@@ -611,7 +611,17 @@ p {
 .projects-list {
   $root: #{&};
 
-  margin-top: calc(var(--s-vertical-spacing) * 0.5);
+  --s-spadding: 50%;
+
+  margin-top: calc(var(--s-gutter) * 0.5);
+
+  &:nth-child(odd) {
+    padding-left: var(--s-spadding);
+  }
+
+  &:nth-child(even) {
+    padding-right: var(--s-spadding);
+  }
 
   &__link {
     text-decoration: none;
