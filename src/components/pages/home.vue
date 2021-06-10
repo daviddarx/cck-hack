@@ -4,7 +4,7 @@
     class="home"
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
-    <div class="content__centered">
+    <div class="column column--centered">
       <h2>
         {{home.title}}
       </h2>

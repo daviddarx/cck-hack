@@ -539,6 +539,18 @@ p {
   }
 }
 
+.column {
+  --s-padding: calc(var(--s-gutter) * 2);
+
+  @include viewport ('mobile-layout') {
+    --s-padding: 0;
+  }
+
+  &--centered {
+    padding: 0 var(--s-padding) 0 var(--s-padding);
+  }
+}
+
 .content {
   --s-vertical-spacing: calc(var(--s-gutter) * 3);
 
@@ -546,16 +558,6 @@ p {
   margin-top: 30vh;
   box-sizing: border-box;
   transition: opacity linear 0.25s;
-
-  &__centered {
-    --s-padding: calc(var(--s-gutter) * 2);
-
-    padding: 0 var(--s-padding) 0 var(--s-padding);
-
-    @include viewport ('mobile-layout') {
-      --s-padding: 0;
-    }
-  }
 
   &__title {
     @include h2();

@@ -4,7 +4,7 @@
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
     class="project"
   >
-    <div class="content__centered">
+    <div class="column column--centered">
 
       <h2 class="project__subline subline"> {{content.subline}} </h2>
 
@@ -34,24 +34,24 @@
         class="project__lead"
       >
       </div>
+    </div>
 
+    <div
+      v-if="content.images && content.images.length"
+      class="project__images"
+    >
       <div
-        v-if="content.images && content.images.length"
-        class="project__images"
+        v-for="(img, i) in content.images"
+        :key="img.image+i"
+        ref="image"
+        class="project__image"
       >
-        <div
-          v-for="(img, i) in content.images"
-          :key="img.image+i"
-          ref="image"
-          class="project__image"
+        <img
+          :src = img.image
+          :alt = content.title
+          class = "img-to-load project__image-el"
+          @load="imgLoaded"
         >
-          <img
-            :src = img.image
-            :alt = content.title
-            class = "img-to-load project__image-el"
-            @load="imgLoaded"
-          >
-        </div>
       </div>
 
       <div
@@ -98,7 +98,9 @@
           </vimeo-player>
         </div>
       </div>
+    </div>
 
+    <div class="column column--centered">
       <h3
         v-if="content.links && content.links.length"
         class="content__subtitle subline"

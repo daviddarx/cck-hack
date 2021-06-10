@@ -4,21 +4,23 @@
     :class="{ 'is-displayed': this.isDisplayed }"
     class="about"
   >
-    <div class="content__centered">
+    <div class="column column--centered">
 
       <h2 class="about__subline subline"> {{about.subline}} </h2>
 
       <div class="about__title content__title">
         {{about.title}}
       </div>
+    </div>
 
-      <img
-        :src = about.image
-        @load="imgLoaded"
-        alt="Cédric Knapp"
-        class="img-to-load about__img"
-      >
+    <img
+      :src = about.image
+      @load="imgLoaded"
+      alt="Cédric Knapp"
+      class="img-to-load about__img"
+    >
 
+    <div class="column column--centered">
       <div
         v-html="getHTMLfromMD(about.lead)"
         class="about__lead"

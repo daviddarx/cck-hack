@@ -4,7 +4,7 @@
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
     class="projects"
   >
-    <div class="content__centered">
+    <div class="column column--centered">
 
       <h2 class="projects__subline subline"> {{projects.subline}} </h2>
 
@@ -17,31 +17,31 @@
         class="projects__lead"
       >
       </div>
+    </div>
 
-      <div class="projects__listing">
-        <div
-          v-for="project in list"
-          :key="project.uuid"
-          ref="project"
-          class="projects-list"
+    <div class="projects__listing">
+      <div
+        v-for="project in list"
+        :key="project.uuid"
+        ref="project"
+        class="projects-list"
+      >
+        <router-link
+          v-bind:to="'/portfolio/'+project.uuid"
+          class="projects-list__link"
         >
-          <router-link
-            v-bind:to="'/portfolio/'+project.uuid"
-            class="projects-list__link"
+          <h3 class="projects-list__subline subline">
+            {{project.subline}}
+          </h3>
+          <p class="projects-list__title">
+            {{project.title}}
+          </p>
+          <div
+            v-html="getProjectTags(project.tags)"
+            class="projects-list__tags"
           >
-            <h3 class="projects-list__subline subline">
-              {{project.subline}}
-            </h3>
-            <p class="projects-list__title">
-              {{project.title}}
-            </p>
-            <div
-              v-html="getProjectTags(project.tags)"
-              class="projects-list__tags"
-            >
-            </div>
-          </router-link>
-        </div>
+          </div>
+        </router-link>
       </div>
     </div>
 
