@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="column column--centered">
+    <div class="column column--wide">
       <img
         :src = about.image
         @load="imgLoaded"
