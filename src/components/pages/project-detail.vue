@@ -15,8 +15,10 @@
         {{content.agency}}
       </span>
 
-      <div class="project__title content__title">
-        {{content.title}}
+      <div
+        class="project__title content__title"
+        v-html="getShy(content.title)"
+      >
       </div>
 
       <div
@@ -145,8 +147,10 @@
           Prev
         </span>
 
-        <span class="pagination-link__title">
-          {{this.linkPrev.title}}
+        <span
+          class="pagination-link__title"
+          v-html="getShy(this.linkPrev.title)"
+        >
         </span>
 
         <div class="pagination-link__arrow arrow"></div>
@@ -160,8 +164,10 @@
           Next
         </span>
 
-        <span class="pagination-link__title">
-          {{this.linkNext.title}}
+        <span
+          class="pagination-link__title"
+          v-html="getShy(this.linkNext.title)"
+        >
         </span>
 
         <div class="pagination-link__arrow pagination-link__arrow--next arrow"></div>
@@ -178,6 +184,7 @@
   import CustomFooter from '../footer.vue';
   import contents from '../../contents';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import getShyMixin from '../../mixins/getShy';
   import imgToLoad from '../../mixins/imgToLoad';
   import projectTags from '../../mixins/projectTags';
 
@@ -190,6 +197,7 @@
     },
     mixins: [
       getHTMLfromMDMixin,
+      getShyMixin,
       imgToLoad,
       projectTags
     ],

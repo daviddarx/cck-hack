@@ -33,8 +33,10 @@
           <h3 class="projects-list__subline subline">
             {{project.subline}}
           </h3>
-          <p class="projects-list__title">
-            {{project.title}}
+          <p
+            class="projects-list__title"
+            v-html="getShy(project.title)"
+          >
           </p>
           <div
             v-html="getProjectTags(project.tags)"
@@ -54,6 +56,7 @@
   import CustomFooter from '../footer.vue';
   import contents from '../../contents';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import getShyMixin from '../../mixins/getShy';
   import projectTags from '../../mixins/projectTags';
 
   export default Vue.extend({
@@ -62,6 +65,7 @@
     },
     mixins: [
       getHTMLfromMDMixin,
+      getShyMixin,
       projectTags
     ],
     data() {
