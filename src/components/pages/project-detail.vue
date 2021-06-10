@@ -38,65 +38,67 @@
       </div>
     </div>
 
-    <div
-      v-if="content.images && content.images.length"
-      class="project__images"
-    >
+    <div class="column column--wide">
       <div
-        v-for="(img, i) in content.images"
-        :key="img.image+i"
-        ref="image"
-        class="project__image"
+        v-if="content.images && content.images.length"
+        class="project__images"
       >
-        <img
-          :src = img.image
-          :alt = content.title
-          class = "img-to-load project__image-el"
-          @load="imgLoaded"
+        <div
+          v-for="(img, i) in content.images"
+          :key="img.image+i"
+          ref="image"
+          class="project__image"
         >
+          <img
+            :src = img.image
+            :alt = content.title
+            class = "img-to-load project__image-el"
+            @load="imgLoaded"
+          >
+        </div>
       </div>
-    </div>
 
-    <div
-      v-if="content.imagesduos && content.imagesduos.length"
-      class="project__images-duos"
-    >
       <div
-        v-for="(duo, i) in content.imagesduos"
-        :key="duo.imageleft+i"
-        ref="imageduo"
-        class="images-duo"
+        v-if="content.imagesduos && content.imagesduos.length"
+        class="project__images-duos"
       >
-        <img
-          :src = duo.imageduo.imageleft
-          :alt = content.title
-          class = "img-to-load images-duo__img images-duo__img--left"
-          @load="imgLoaded"
+        <div
+          v-for="(duo, i) in content.imagesduos"
+          :key="duo.imageleft+i"
+          ref="imageduo"
+          class="images-duo"
         >
-        <img
-          :src = duo.imageduo.imageright
-          :alt = content.title
-          class = "img-to-load images-duo__img images-duo__img--right"
-          @load="imgLoaded"
-        >
+          <img
+            :src = duo.imageduo.imageleft
+            :alt = content.title
+            class = "img-to-load images-duo__img images-duo__img--left"
+            @load="imgLoaded"
+          >
+          <img
+            :src = duo.imageduo.imageright
+            :alt = content.title
+            class = "img-to-load images-duo__img images-duo__img--right"
+            @load="imgLoaded"
+          >
+        </div>
       </div>
-    </div>
 
-    <div
-      class="project__videos"
-    >
       <div
-        v-for="(vid, i) in content.videos"
-        :key="vid.vimeoid+i"
-        class="project__video"
+        class="project__videos"
       >
-        <vimeo-player
-          ref="player"
-          :video-id="vid.vimeoid"
-          :options="{'responsive':true}"
-          class="project__video-el"
+        <div
+          v-for="(vid, i) in content.videos"
+          :key="vid.vimeoid+i"
+          class="project__video"
         >
-        </vimeo-player>
+          <vimeo-player
+            ref="player"
+            :video-id="vid.vimeoid"
+            :options="{'responsive':true}"
+            class="project__video-el"
+          >
+          </vimeo-player>
+        </div>
       </div>
     </div>
 
