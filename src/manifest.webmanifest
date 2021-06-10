@@ -1,6 +1,6 @@
 {
-  "name": "daviddarx",
-  "short_name": "daviddarx",
+  "name": "Cédric Knapp – content that matters",
+  "short_name": "Cédric Knapp",
   "icons": [
     {
       "src": "favicon/android-chrome-192x192.png",
@@ -8,13 +8,13 @@
       "type": "image/png"
     },
     {
-      "src": "favicon/android-chrome-512x512.png",
+      "src": "favicon/android-chrome-256x256.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#e6e6e6",
+  "background_color": "#0043f8",
   "display": "fullscreen",
   "orientation": "portrait"
 }
