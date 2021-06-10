@@ -703,6 +703,7 @@ p {
 
   &__img {
     width: calc(50% - var(--s-gutter) * 0.2);
+    height: auto;
   }
 }
 
