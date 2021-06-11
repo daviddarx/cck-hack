@@ -8,8 +8,10 @@
 
       <h2 class="about__subline subline content__subtitle"> {{about.subline}} </h2>
 
-      <div class="about__title content__title">
-        {{about.title}}
+      <div
+        class="about__title content__title"
+        v-html="getShy(about.title)"
+      >
       </div>
     </div>
 
@@ -143,6 +145,7 @@
   import CustomFooter from '../footer.vue';
   import contents from '../../contents';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import getShyMixin from '../../mixins/getShy';
   import imgToLoad from '../../mixins/imgToLoad';
 
   export default Vue.extend({
@@ -151,6 +154,7 @@
     },
     mixins: [
       getHTMLfromMDMixin,
+      getShyMixin,
       imgToLoad
     ],
     data() {
