@@ -256,8 +256,14 @@ p {
       height: 8.3em;
       top: -1em;
       left: -2.7em;
-      background-color: var(--c-bg);
+      background-color: transparent;
+      transition: background-color ease-out 0.25s 0.5s;
       border-radius: 4em;
+
+      .is-minified & {
+        background-color: var(--c-bg);
+        transition-delay: 0s;
+      }
     }
 
     @include viewport ('mobile-layout') {
