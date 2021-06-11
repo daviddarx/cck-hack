@@ -272,20 +272,33 @@ p {
     margin-top: -0.55em;
     z-index: 10;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 21em;
-      height: 8.3em;
-      top: -1em;
-      left: -2.7em;
-      background-color: transparent;
-      transition: background-color ease-out 0.25s 0.5s;
-      border-radius: 4em;
+    a {
+      display: block;
+      position: relative;
 
-      .is-minified & {
-        background-color: var(--c-bg);
-        transition-delay: 0s;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 21em;
+        height: 8.3em;
+        top: -1em;
+        left: -2.5em;
+        background-color: transparent;
+        transition: background-color ease-out 0.25s 0.5s;
+        border-radius: 4em;
+
+        .is-minified & {
+          background-color: var(--c-bg);
+          transition-delay: 0s;
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+
+        &::before {
+          box-shadow: 0 0 0 4px var(--c-focus);
+        }
       }
     }
 
