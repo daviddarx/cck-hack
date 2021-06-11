@@ -1,0 +1,19 @@
+{
+  "agency": "Eyekon",
+  "date": "2021-05-12T22:00:00.000Z",
+  "subline": "BWI",
+  "title": "Nachhaltiges Konzept für Kampagnen",
+  "images": [
+    {
+      "image": "/images/uploads/bwi_banner_1200x1200.jpg"
+    },
+    {
+      "image": "/images/uploads/bwi_banner_1200x12002.jpg"
+    }
+  ],
+  "tags": "Branding, Konzept, Kommunikation, Kampagnen",
+  "credits": "David Darx – Design",
+  "uuid": "bwi",
+  "lead": "lorem ipsum",
+  "year": "2020"
+}
