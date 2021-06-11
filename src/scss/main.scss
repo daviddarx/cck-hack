@@ -774,6 +774,7 @@ p {
   &__img {
     width: calc(50% - var(--s-gutter) * 0.2);
     height: auto;
+    align-self: center;
 
     @include viewport ('mobile-l') {
       width: 100%;
