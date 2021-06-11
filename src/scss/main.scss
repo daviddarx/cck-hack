@@ -940,6 +940,10 @@ p {
 
   &__language-title {
     flex-basis: 35%;
+
+    @include viewport ('mobile-l') {
+      flex-basis: 50%;
+    }
   }
 
   &__language-value {
