@@ -193,6 +193,10 @@ p {
   position: relative;
   font-weight: bold;
 
+  @include viewport ('mobile-s') {
+    --s-title: calc(var(--s-text-s) * 2);
+  }
+
   &.is-deactived {
     pointer-events: none;
   }
@@ -225,11 +229,21 @@ p {
   &__desc {
     @include fontRunText();
 
+    --ratio-x: 3.65;
+    --ratio-y: -0.65;
+
     position: absolute;
     width: 15em;
     line-height: 1.1;
     font-size: var(--s-text-s);
-    transform: translate(60%, -70%);
+    transform: translate(calc(var(--s-title) * var(--ratio-x)), calc(var(--s-title) * var(--ratio-y)));
+
+    @include viewport ('mobile-s') {
+      --ratio-x: 3.6;
+      --ratio-y: -0.3;
+
+      font-size: calc(var(--s-text) * 0.5);
+    }
   }
 }
 
@@ -277,9 +291,8 @@ p {
   }
 
   &__burger {
-    --s-dim: calc(var(--s-gutter) * 0.5);
-
     position: absolute;
+    z-index: 2000;
     top: var(--s-gutter);
     right: var(--s-gutter);
     visibility: hidden;
@@ -336,6 +349,7 @@ p {
     @include viewport ('mobile-layout') {
       position: fixed;
       display: flex;
+      z-index: 2000;
       flex-direction: column-reverse;
       justify-content: center;
       align-items: baseline;
@@ -402,10 +416,12 @@ p {
       background-color: var(--c-title);
       border: var(--s-line) solid var(--c-bg);
 
-      &:hover {
-        color: var(--c-title);
-        background-color: var(--c-bg);
-        border-color: var(--c-bg);
+      @include hover() {
+        &:hover {
+          color: var(--c-title);
+          background-color: var(--c-bg);
+          border-color: var(--c-bg);
+        }
       }
 
       &--secondary {
@@ -425,7 +441,7 @@ p {
       --duration: 0.5s;
       --delay: var(--duration);
 
-      transform: translateX(calc(var(--s-gutter) * 5));
+      transform: translateX(calc(var(--s-gutter) * 8));
       transition-property: color, border-color, background-color, transform;
       transition-timing-function: var(--e-text-content), var(--e-text-content), var(--e-text-content), var(--e-out);
       transition-duration: var(--d-text-content), var(--d-text-content), var(--d-text-content), var(--duration);
@@ -459,7 +475,7 @@ p {
 }
 
 .burger {
-  --s-dim: calc(var(--s-gutter) * 1.5);
+  --s-dim: calc(var(--s-gutter) * 1.9);
 
   $root: #{&};
 
@@ -475,6 +491,14 @@ p {
     &:hover {
       background-color: var(--c-title);
     }
+  }
+
+  @include viewport ('mobile-l') {
+    --s-dim: calc(var(--s-gutter) * 2.2);
+  }
+
+  @include viewport ('mobile-s') {
+    --s-dim: calc(var(--s-gutter) * 2.75);
   }
 
   &.is-close {
@@ -560,8 +584,6 @@ p {
 }
 
 .content {
-  --s-vertical-spacing: calc(var(--s-gutter) * 2);
-
   position: relative;
   margin-top: 30vh;
   box-sizing: border-box;
@@ -570,6 +592,10 @@ p {
   &__subtitle {
     font-size: var(--s-text-s);
     margin-bottom: var(--s-subline-margin-bottom);
+
+    @include viewport ('mobile-l') {
+      margin-bottom: calc(var(--s-gutter) * 0.75);
+    }
   }
 
   &__title {
@@ -629,7 +655,7 @@ p {
 .projects-list {
   $root: #{&};
 
-  margin-top: calc(var(--s-gutter) * 1);
+  margin-top: calc(var(--s-vertical-spacing) * 0.5);
 
   &__link {
     text-decoration: none;
@@ -647,11 +673,19 @@ p {
         color: var(--c-text);
       }
     }
+
+    @include viewport ('mobile-l') {
+      margin-top: calc(var(--s-gutter) * 0.5);
+    }
   }
 
   &__tags {
     font-size: var(--s-text-s);
     margin-top: 3em;
+
+    @include viewport ('mobile-l') {
+      margin-top: 2em;
+    }
   }
 
   .tag {
@@ -668,12 +702,24 @@ p {
   &__agency {
     font-size: var(--s-text-s);
     line-height: var(--s-lh-h2);
-    margin-left: 3em;
+  }
+
+  &__year,
+  &__client {
+    margin-right: 3em;
+
+    @include viewport ('mobile') {
+      margin-right: 1.5em;
+    }
   }
 
   &__tags {
     font-size: var(--s-text-s);
     margin-top: 5em;
+
+    @include viewport ('mobile-s') {
+      margin-top: 3em;
+    }
   }
 
   &__lead {
@@ -721,14 +767,26 @@ p {
   display: flex;
   justify-content: space-between;
 
+  @include viewport ('mobile-l') {
+    display: block;
+  }
+
   &__img {
     width: calc(50% - var(--s-gutter) * 0.2);
     height: auto;
+
+    @include viewport ('mobile-l') {
+      width: 100%;
+    }
   }
 }
 
 .pagination {
   display: flex;
+
+  @include viewport ('tablet') {
+    display: block;
+  }
 }
 
 .pagination-link {
@@ -746,6 +804,7 @@ p {
 
   &__subline {
     margin-bottom: var(--s-subline-margin-bottom);
+    display: block;
   }
 
   &__title {
@@ -755,8 +814,14 @@ p {
     color: var(--c-title);
     transition: color var(--e-text-content) var(--d-text-content);
 
-    #{$root}:hover & {
-      color: var(--c-text);
+    @include viewport ('mobile-layout') {
+      font-size: var(--s-text);
+    }
+
+    @include hover() {
+      #{$root}:hover & {
+        color: var(--c-text);
+      }
     }
   }
 
@@ -835,6 +900,12 @@ p {
   &__position-dates {
     transform: translate(1em, -1.3em);
     color: var(--c-title);
+
+    @include viewport ('mobile-l') {
+      display: block;
+      margin-top: 0.7em;
+      transform: none;
+    }
   }
 
   &__language {
@@ -870,6 +941,11 @@ p {
 
   &__skills {
     margin-top: 0.5em;
+
+    @include viewport ('mobile-l') {
+      margin-top: 2.7em;
+    }
+
   }
 
   &__skill {
@@ -893,9 +969,28 @@ p {
   margin-top: calc(var(--s-gutter) * 2);
   padding-bottom: var(--s-gutter);
 
+  @include viewport ('mobile-layout') {
+    display: block;
+    margin-top: var(--s-vertical-spacing);
+    border-top: var(--s-line) var(--c-title) solid;
+
+    &__copyright {
+      margin-top: calc(var(--s-gutter) * 0.5);
+    }
+
+    &__credits {
+      margin-top: calc(var(--s-gutter) * 1.5);
+    }
+  }
+
   &__dash {
     display: inline-block;
     padding: 0 1em 0 1em;
+
+    @include viewport ('tablet') {
+      display: block;
+      color: transparent;
+    }
   }
 }
 
