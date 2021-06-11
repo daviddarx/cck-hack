@@ -18,6 +18,15 @@
       "skill": "PR"
     },
     {
+      "skill": "Storyboarding"
+    },
+    {
+      "skill": "Wireframing"
+    },
+    {
+      "skill": "Scriptwriting"
+    },
+    {
       "skill": "Google Ads"
     },
     {
@@ -25,12 +34,6 @@
     },
     {
       "skill": "SEO/SEA/SEM"
-    },
-    {
-      "skill": "Storyboarding"
-    },
-    {
-      "skill": "Wireframing"
     },
     {
       "skill": "Adobe Creative Suite"
@@ -48,7 +51,7 @@
       "skill": "Social Media"
     },
     {
-      "skill": "Mailchimp"
+      "skill": "Mailchimp/CRM"
     },
     {
       "skill": "CMS"
@@ -78,7 +81,7 @@
       "description": "Neben meinem Bachelorstudium an der Uni Zürich arbeitete ich im Bereich Medienanalyse, in einem Kino und bei einem Meinungsforschungsinstitut (die, die dich anrufen und mit Umfragen nerven – ich war jung und brauchte das Geld)."
     }
   ],
-  "cvlabelen": "Download CV",
+  "cvlabelen": "Download CV (EN)",
   "positionstitle": "Experience",
   "cvdocen": "/images/uploads/cv_ck_2021-eng-.pdf",
   "clientstitle": "Clients",
@@ -109,6 +112,6 @@
     }
   ],
   "image": "/images/uploads/cedric-knapp.jpg",
-  "lead": "Manchmal nervt mich, wie in der Schweiz kommuniziert wird. Man überlegt sich viel zu viel und gleichzeitig viel zu wenig. Man wählt den sicheren statt den aufregenden Weg. Und verschläft, dass die Regeln durch Digitalisierung und Generationenwechsel auf den Kopf gestellt werden. \n\nNerven deshalb, weil mir ein Bachelor in Kommunikation und Wirtschaft (Uni Zürich) und Stationen als Online-Redaktor, Content Creator und Projektmanager gezeigt haben, dass das Potenzial eigentlich riesig ist. Es braucht nur Mut zu frischen Ideen.",
+  "lead": "Manchmal nervt mich, wie in der Schweiz kommuniziert wird. Man überlegt sich viel zu viel und gleichzeitig viel zu wenig. Man wählt den sicheren statt den aufregenden Weg. Und verschläft, dass die Regeln durch Digitalisierung und Generationenwechsel auf den Kopf gestellt werden. \n\nNerven deshalb, weil mir ein Bachelor in Kommunikation / Wirtschaft (Uni Zürich), Stationen im Journalismus und Agentur-Zirkus und 31 Jahre auf diesem Planeten gezeigt haben, dass das Potenzial eigentlich riesig ist. Es braucht nur Mut zu frischen Ideen.",
   "languagestitle": "Languages"
 }
