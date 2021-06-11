@@ -706,7 +706,7 @@ p {
 
   &__year,
   &__client {
-    margin-right: 3em;
+    margin-right: 2em;
 
     @include viewport ('mobile') {
       margin-right: 1.5em;
