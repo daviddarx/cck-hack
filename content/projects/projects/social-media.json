@@ -1,8 +1,8 @@
 {
   "agency": "Eyekon",
-  "date": "2021-06-11T08:44:57.427Z",
+  "date": "2021-05-20T08:44:57.427Z",
   "subline": "Diverse",
-  "title": "Social-Media-Konzepte",
+  "title": "Social-Media-Konzepte ",
   "images": [
     {
       "image": "/images/uploads/swisscheese2.png"
@@ -13,6 +13,6 @@
   ],
   "tags": "Social Media, Kampagnen, Konzept, Strategie",
   "uuid": "social-media",
-  "lead": "Lorem ipsum",
+  "lead": "Lorem ipsum\n\nBeispiel Swiss Cheese Marketing.",
   "year": "2020-2021"
 }
