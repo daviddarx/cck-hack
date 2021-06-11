@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="projects__listing">
+    <div class="projects__listing column column--centered">
       <div
         v-for="project in list"
         :key="project.uuid"

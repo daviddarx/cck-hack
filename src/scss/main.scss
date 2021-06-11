@@ -622,17 +622,7 @@ p {
 .projects-list {
   $root: #{&};
 
-  --s-spadding: 50%;
-
   margin-top: calc(var(--s-gutter) * 1);
-
-  &:nth-child(odd) {
-    padding-left: var(--s-spadding);
-  }
-
-  &:nth-child(even) {
-    padding-right: var(--s-spadding);
-  }
 
   &__link {
     text-decoration: none;
@@ -824,20 +814,10 @@ p {
   }
 
   &__position {
-    --s-spadding: 50%;
-
-    margin-top: calc(var(--s-vertical-spacing) * 0.75);
+    margin-top: calc(var(--s-vertical-spacing) * 1);
 
     &:first-child {
       margin-top: 0;
-    }
-
-    &:nth-child(odd) {
-      padding-left: var(--s-spadding);
-    }
-
-    &:nth-child(even) {
-      padding-right: var(--s-spadding);
     }
   }
 
@@ -846,11 +826,8 @@ p {
   }
 
   &__position-dates {
-    margin-bottom: var(--s-subline-margin-bottom);
-  }
-
-  &__position-desc {
-    font-size: var(--s-text-s);
+    transform: translate(1em, -1.3em);
+    color: var(--c-title);
   }
 
   &__language {

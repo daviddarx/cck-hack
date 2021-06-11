@@ -48,26 +48,30 @@
       </div>
     </div>
 
-    <h3 class="content__subline subline about__positions-title">
-      {{about.positionstitle}}
-    </h3>
+    <div class="column column--centered">
+      <h3 class="content__subline subline">
+        {{about.positionstitle}}
+      </h3>
 
-    <div class="about__positions">
-      <div
-        v-for="position in about.positions"
-        :key="position.title"
-        class="about__position"
-      >
-        <span class="about__position-dates subline">
-          {{position.dates}}
-        </span>
-        <h4 class="about__position-title">
-          {{position.agency}}
-        </h4>
+      <div class="about__positions">
         <div
-          class="about__position-desc"
-          v-html="getHTMLfromMD(position.description)"
+          v-for="position in about.positions"
+          :key="position.title"
+          class="about__position"
         >
+          <h4>
+            <span class="about__position-title">
+              {{position.agency}}
+            </span>
+            <span class="about__position-dates subline">
+              {{position.dates}}
+            </span>
+          </h4>
+          <div
+            class="about__position-desc"
+            v-html="getHTMLfromMD(position.description)"
+          >
+          </div>
         </div>
       </div>
     </div>
