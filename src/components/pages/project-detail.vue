@@ -6,14 +6,17 @@
   >
     <div class="column column--centered">
 
-      <h2 class="project__subline subline"> {{content.subline}} </h2>
+      <div class="content__subtitle">
+        <h2 class="project__subline subline"> {{content.subline}} </h2>
 
-      <span class="project__year">
-        {{content.year}}
-      </span>
-      <span class="project__agency">
-        {{content.agency}}
-      </span>
+        <span class="project__year">
+          {{content.year}}
+        </span>
+
+        <span class="project__agency">
+          {{content.agency}}
+        </span>
+      </div>
 
       <div
         class="project__title content__title"
@@ -84,6 +87,7 @@
       </div>
 
       <div
+        v-if="content.videos && content.videos.length"
         class="project__videos"
       >
         <div
@@ -105,7 +109,7 @@
     <div class="column column--centered">
       <h3
         v-if="content.links && content.links.length"
-        class="content__subtitle subline"
+        class="content__subline subline"
       >
         Links
       </h3>
@@ -127,7 +131,7 @@
 
       <h3
         v-if="content.credits"
-        class="content__subtitle subline"
+        class="content__subline subline"
       >
         Credits
       </h3>

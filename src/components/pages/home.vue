@@ -10,6 +10,7 @@
       </h2>
 
       <div
+        class="home__desc"
         v-html="getHTMLfromMD(home.content)"
       >
       </div>

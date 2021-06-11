@@ -77,6 +77,7 @@ p {
   --s-padding-modifier-bottom: 0.45;
 
   display: inline-block;
+  font-size: var(--s-text-s);
   letter-spacing: 0.07em;
   text-decoration: none;
   padding-left: var(--s-padding);
@@ -552,24 +553,28 @@ p {
 }
 
 .content {
-  --s-vertical-spacing: calc(var(--s-gutter) * 3);
+  --s-vertical-spacing: calc(var(--s-gutter) * 2);
 
   position: relative;
   margin-top: 30vh;
   box-sizing: border-box;
   transition: opacity linear 0.25s;
 
-  &__title {
-    @include h2();
-
-    margin-top: 0.75em;
+  &__subtitle {
+    font-size: var(--s-text-s);
+    margin-bottom: var(--s-subline-margin-bottom);
   }
 
-  &__subtitle {
+  &__title {
+    @include h2();
+  }
+
+  &__subline {
+    display: block;
     color: var(--c-text);
     width: 50%;
     margin-top: var(--s-vertical-spacing);
-    margin-bottom: calc(var(--s-vertical-spacing) * 0.5);
+    margin-bottom: var(--s-subline-margin-bottom);
   }
 
   .transition-out & {
@@ -610,7 +615,7 @@ p {
 
 .projects {
   &__listing {
-    margin-top: calc(var(--s-vertical-spacing) * 0.75);
+    margin-top: calc(var(--s-vertical-spacing) * 1);
   }
 }
 
@@ -619,7 +624,7 @@ p {
 
   --s-spadding: 50%;
 
-  margin-top: calc(var(--s-gutter) * 0.5);
+  margin-top: calc(var(--s-gutter) * 1);
 
   &:nth-child(odd) {
     padding-left: var(--s-spadding);
@@ -637,7 +642,7 @@ p {
   &__title {
     @include h3();
 
-    margin-top: 0.8em;
+    margin-top: 1em;
     transition: color var(--e-text-content) var(--d-text-content);
 
     @include hover() {
@@ -734,17 +739,22 @@ p {
 
   --s-padding: calc(var(--s-gutter) * 0.5);
 
+  flex-basis: 50%;
+  flex-shrink: 0;
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
   padding-left: var(--s-padding);
   padding-right: var(--s-padding);
 
+  &__subline {
+    margin-bottom: var(--s-subline-margin-bottom);
+  }
+
   &__title {
     @include h3();
 
     display: block;
-    margin-top: 1em;
     color: var(--c-title);
     transition: color var(--e-text-content) var(--d-text-content);
 
@@ -788,22 +798,46 @@ p {
   }
 }
 
+.home {
+  &__desc {
+    margin-bottom: var(--s-p-margin-bottom);
+  }
+}
+
 .about {
   &__img {
     width: 100%;
-    margin-top: 2.5em;
+    margin-top: calc(var(--s-vertical-spacing) * 0.8);
   }
 
-  &__link {
-    margin-top: var(--s-p-margin-top);
+  &__lead {
+    margin-bottom: var(--s-p-margin-bottom);
+  }
+
+  &__cta {
     margin-bottom: 0;
   }
 
+  &__positions-title {
+    position: absolute;
+    margin: 0;
+  }
+
   &__position {
-    margin-top: calc(var(--s-vertical-spacing) * 0.5);
+    --s-spadding: 50%;
+
+    margin-top: calc(var(--s-vertical-spacing) * 0.75);
 
     &:first-child {
       margin-top: 0;
+    }
+
+    &:nth-child(odd) {
+      padding-left: var(--s-spadding);
+    }
+
+    &:nth-child(even) {
+      padding-right: var(--s-spadding);
     }
   }
 
@@ -812,14 +846,15 @@ p {
   }
 
   &__position-dates {
-    display: inline-block;
-    color: var(--c-text);
-    transform: translate(1em, -2em);
+    margin-bottom: var(--s-subline-margin-bottom);
+  }
+
+  &__position-desc {
+    font-size: var(--s-text-s);
   }
 
   &__language {
     display: flex;
-    margin-top: 1em;
 
     &:first-child {
       margin-top: 0;
@@ -827,24 +862,34 @@ p {
   }
 
   &__language-title {
-    flex-basis: 25%;
+    flex-basis: 35%;
   }
 
   &__language-value {
     span {
-      --s: 0.75em;
+      --s: 0.5em;
 
       display: inline-block;
+      position: relative;
       width: var(--s);
       height: var(--s);
       background-color: var(--c-tag);
-      margin-right: 1em;
+      top: -0.05em;
+      margin-right: 0.75em;
       border-radius: 100%;
 
       &.active {
         background-color: var(--c-title);
       }
     }
+  }
+
+  &__skills {
+    margin-top: 0.5em;
+  }
+
+  &__skill {
+    font-size: var(--s-text-s);
   }
 
   &__clients,

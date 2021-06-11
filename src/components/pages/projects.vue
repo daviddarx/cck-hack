@@ -6,7 +6,7 @@
   >
     <div class="column column--centered">
 
-      <h2 class="projects__subline subline"> {{projects.subline}} </h2>
+      <h2 class="projects__subline subline content__subtitle"> {{projects.subline}} </h2>
 
       <div class="projects__title content__title">
         {{projects.title}}

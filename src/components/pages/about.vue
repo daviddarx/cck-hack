@@ -6,7 +6,7 @@
   >
     <div class="column column--centered">
 
-      <h2 class="about__subline subline"> {{about.subline}} </h2>
+      <h2 class="about__subline subline content__subtitle"> {{about.subline}} </h2>
 
       <div class="about__title content__title">
         {{about.title}}
@@ -29,49 +29,51 @@
       >
       </div>
 
-      <a
-        :href = about.cvdocde
-        target="_blank"
-        class="about__link cta"
-      >
-        {{about.cvlabelde}}
-      </a>
-
-      <a
-        :href = about.cvdocen
-        target="_blank"
-        class="about__link cta"
-      >
-        {{about.cvlabelen}}
-      </a>
-
-      <h3 class="content__subtitle subline">
-        {{about.positionstitle}}
-      </h3>
-
-      <div class="about__positions">
-        <div
-          v-for="position in about.positions"
-          :key="position.title"
-          class="about__position"
+      <div class="about__cv">
+        <a
+          :href = about.cvdocde
+          target="_blank"
+          class="about__cta cta"
         >
-          <h4>
-            <span class="about__position-title">
-              {{position.agency}}
-            </span>
-            <span class="about__position-dates subline">
-              {{position.dates}}
-            </span>
-          </h4>
-          <div
-            class="about__position-desc"
-            v-html="getHTMLfromMD(position.description)"
-          >
-          </div>
+          {{about.cvlabelde}}
+        </a>
+
+        <a
+          :href = about.cvdocen
+          target="_blank"
+          class="about__link cta"
+        >
+          {{about.cvlabelen}}
+        </a>
+      </div>
+    </div>
+
+    <h3 class="content__subline subline about__positions-title">
+      {{about.positionstitle}}
+    </h3>
+
+    <div class="about__positions">
+      <div
+        v-for="position in about.positions"
+        :key="position.title"
+        class="about__position"
+      >
+        <span class="about__position-dates subline">
+          {{position.dates}}
+        </span>
+        <h4 class="about__position-title">
+          {{position.agency}}
+        </h4>
+        <div
+          class="about__position-desc"
+          v-html="getHTMLfromMD(position.description)"
+        >
         </div>
       </div>
+    </div>
 
-      <h3 class="content__subtitle subline">
+    <div class="column column--centered">
+      <h3 class="content__subline subline">
         {{about.languagestitle}}
       </h3>
 
@@ -92,7 +94,7 @@
         </div>
       </div>
 
-      <h3 class="content__subtitle subline">
+      <h3 class="content__subline subline">
         {{about.skillstitle}}
       </h3>
 
@@ -107,7 +109,7 @@
         </span>
       </div>
 
-      <h3 class="content__subtitle subline">
+      <h3 class="content__subline subline">
         {{about.clientstitle}}
       </h3>
 
@@ -117,7 +119,7 @@
       >
       </div>
 
-      <h3 class="content__subtitle subline">
+      <h3 class="content__subline subline">
         {{about.contacttitle}}
       </h3>
 
