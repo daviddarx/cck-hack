@@ -100,6 +100,7 @@ p {
 @mixin cta() {
   @include tag();
 
+  text-transform: uppercase;
   border: var(--s-line) solid var(--c-title);
   background-color: var(--c-bg);
 
