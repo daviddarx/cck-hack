@@ -7,7 +7,7 @@
     <div class="column column--centered">
 
       <div class="content__subtitle">
-        <h2 class="project__subline subline"> {{content.subline}} </h2>
+        <h2 class="project__client project__subline subline"> {{content.subline}} </h2>
 
         <span class="project__year">
           {{content.year}}
