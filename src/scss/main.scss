@@ -2,7 +2,7 @@
 @import './assets.scss';
 
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.01);
 }
 
 ::selection {
@@ -807,7 +807,7 @@ p {
   display: flex;
 
   @include viewport ('tablet') {
-    display: block;
+    flex-wrap: wrap-reverse;
   }
 }
 
@@ -823,6 +823,14 @@ p {
   text-decoration: none;
   padding-left: var(--s-padding);
   padding-right: var(--s-padding);
+
+  @include viewport ('tablet') {
+    flex-basis: 100%;
+
+    &--prev {
+      margin-top: calc(var(--s-gutter) * 2);
+    }
+  }
 
   &__subline {
     margin-bottom: var(--s-subline-margin-bottom);
