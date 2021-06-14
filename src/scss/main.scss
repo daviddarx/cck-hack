@@ -379,6 +379,7 @@ p {
       height: 100vh;
       background-color: var(--c-title);
       padding: var(--s-gutter);
+      padding-right: calc(var(--s-gutter) * 3);
       box-sizing: border-box;
       pointer-events: none;
       transform: translateX(100%);
@@ -462,7 +463,7 @@ p {
       --duration: 0.5s;
       --delay: var(--duration);
 
-      transform: translateX(calc(var(--s-gutter) * 8));
+      transform: translateX(100vw);
       transition-property: color, border-color, background-color, transform;
       transition-timing-function: var(--e-text-content), var(--e-text-content), var(--e-text-content), var(--e-out);
       transition-duration: var(--d-text-content), var(--d-text-content), var(--d-text-content), var(--duration);
@@ -472,7 +473,7 @@ p {
         transform: translateX(0);
 
         @for $i from 0 through 6 {
-          &:nth-child(#{$i}) {
+          &:nth-child(#{6-$i}) {
             --delay: #{$i * 0.05}s;
           }
         }
@@ -541,7 +542,7 @@ p {
     left: 50%;
     transform-origin: center;
     transform: translate(-50%, var(--pos-y)) rotate(var(--rotation)) scaleX(var(--scale-x));
-    transition: transform var(--e-inout) 0.5s, background-color var(--e-text-content) var(--d-text-content);
+    transition: transform var(--e-out) 0.25s, background-color var(--e-text-content) var(--d-text-content);
 
     @include hover() {
       #{$root}:hover & {
