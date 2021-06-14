@@ -11,7 +11,7 @@
   text-shadow: none;
 }
 
-*:focus {
+*:focus-visible {
   position: relative;
   outline: none;
   z-index: 100;
@@ -293,7 +293,7 @@ p {
         }
       }
 
-      &:focus {
+      &:focus-visible {
         box-shadow: none;
 
         &::before {
