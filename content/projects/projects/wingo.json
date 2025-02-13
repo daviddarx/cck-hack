@@ -3,7 +3,11 @@
   "date": "2025-02-11T23:00:00.000Z",
   "subline": "Wingo",
   "title": "Vor dem ersten Treffen das Smartphone deines Dates durchstöbern",
-  "videos": [],
+  "videos": [
+    {
+      "vimeoid": "1056330232"
+    }
+  ],
   "tags": "Konzept/Story, Regie, Drehplanung, Casting, Projektleitung, Account Management",
   "credits": "Adam Keel & Lars Näpflin – Videoproduktion",
   "uuid": "wingo",
