@@ -3,7 +3,11 @@
   "date": "2025-10-21T22:00:00.000Z",
   "subline": "Die Mobiliar",
   "title": "Prämienrabatt macht Social-Trends zu Fails",
-  "videos": [],
+  "videos": [
+    {
+      "vimeoid": "1129525885"
+    }
+  ],
   "tags": "Konzept, Drehplanung, Casting, Regie",
   "uuid": "mobiliar",
   "lead": "Lead",
