@@ -773,7 +773,7 @@ p {
   }
 
   &__video-el--vertical {
-    width: calc(100vh * (9 / 16)) !important;
+    width: min(calc(100vh * (9 / 16)), calc(100vw - 2 * var(--s-gutter))) !important;
   }
 
   &__link {
