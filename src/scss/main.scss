@@ -768,6 +768,12 @@ p {
 
   &__video-el {
     width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__video-el--vertical {
+    width: calc(100vh * (9 / 16)) !important;
   }
 
   &__link {

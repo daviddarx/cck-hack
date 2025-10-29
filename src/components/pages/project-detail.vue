@@ -99,7 +99,7 @@
             ref="player"
             :video-id="vid.vimeoid"
             :options="{'responsive':true}"
-            class="project__video-el"
+            :class="['project__video-el', { 'project__video-el--vertical': vid.vertical }]"
           >
           </vimeo-player>
         </div>

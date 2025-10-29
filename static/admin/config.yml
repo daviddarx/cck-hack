@@ -260,6 +260,11 @@ collections:
           - label: "Vimeo ID"
             name: "vimeoid"
             widget: "string"
+          - label: "Vertical"
+            name: "vertical"
+            widget: "boolean"
+            required: false
+            default: false
 
       - label: "Links"
         name: "links"
