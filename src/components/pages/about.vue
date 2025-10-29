@@ -31,8 +31,12 @@
       >
       </div>
 
-      <div class="about__cv">
+      <div
+        v-if="(about.cvdocde && about.cvlabelde) || (about.cvdocen && about.cvlabelen)"
+        class="about__cv"
+      >
         <a
+          v-if="about.cvdocde && about.cvlabelde"
           :href = about.cvdocde
           target="_blank"
           class="about__cta cta"
@@ -41,6 +45,7 @@
         </a>
 
         <a
+          v-if="about.cvdocen && about.cvlabelen"
           :href = about.cvdocen
           target="_blank"
           class="about__link cta"

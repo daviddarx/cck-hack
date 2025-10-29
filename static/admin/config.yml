@@ -3,6 +3,8 @@ backend:
   repo: daviddarx/cck-hack
   branch: main
 
+local_backend: true # For local admin, remove for production
+
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
@@ -65,18 +67,22 @@ collections:
       - label: "CV Label DE"
         name: "cvlabelde"
         widget: "string"
+        required: false
 
       - label: "CV Doc DE"
         name: "cvdocde"
         widget: "file"
+        required: false
 
       - label: "CV Label EN"
         name: "cvlabelen"
         widget: "string"
+        required: false
 
       - label: "CV Doc DE"
         name: "cvdocen"
         widget: "file"
+        required: false
 
       - label: "Positions Title"
         name: "positionstitle"
