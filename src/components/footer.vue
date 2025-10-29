@@ -2,7 +2,7 @@
 <template>
   <div class="footer">
     <p class="footer__copyright">
-      ©{{this.year}} Cédric Knapp <span class="footer__dash">–</span> <a href="mailto:talk@justknapp.com" class="text-link">talk@justknapp.com</a> <span class="footer__dash">–</span> <a href="tel:+41 77 425 60 66" class="text-link">+41 77 425 60 66</a>
+      ©{{this.year}} Cédric Knapp <span class="footer__dash">–</span> <a href="mailto:cedi@jellyjelly.ch" class="text-link">cedi@jellyjelly.ch</a> <span class="footer__dash">–</span> <a href="tel:+41 77 425 60 66" class="text-link">+41 77 425 60 66</a>
 
     </p>
     <p class="footer__credits">

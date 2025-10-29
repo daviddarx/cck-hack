@@ -12,7 +12,7 @@
       <div class="navigation__links">
         <h2 class="visually-hidden">Navigation</h2>
 
-        <a href="mailto:talk@justknapp.com" class="navigation__link navigation__link--secondary navigation__email">talk@justknapp.com</a><!--
+        <a href="mailto:cedi@jellyjelly.ch" class="navigation__link navigation__link--secondary navigation__email">cedi@jellyjelly.ch</a><!--
         --><a href="tel:+41 77 425 60 66" class="navigation__link navigation__link--secondary navigation__phone">+41 77 425 60 66</a><!--
         --><router-link
           class="navigation__link"
